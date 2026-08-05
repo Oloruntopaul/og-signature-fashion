@@ -1,6 +1,4 @@
-// =============================
 // SHOP PAGE — sidebar category filter
-// =============================
 
 let activeCategory = null;
 
@@ -44,7 +42,7 @@ function renderSidebar() {
     })
     .join("");
 
-  // ✅ NEW: Dynamically populate the mobile dropdown so it matches the sidebar
+  // Dynamically populate the mobile dropdown so it matches the sidebar
   const mobileDropdown = document.getElementById("mobileCategorySelect");
   if (mobileDropdown) {
     mobileDropdown.innerHTML = categories

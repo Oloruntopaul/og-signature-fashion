@@ -1,8 +1,4 @@
-// =============================
 // HOMEPAGE COLLECTION TEASER
-// Heart is white by default, turns red once the item is added to cart.
-// =============================
-
 function renderCollectionTeaser() {
   const grid = document.getElementById("collectionGrid");
   if (!grid) return;

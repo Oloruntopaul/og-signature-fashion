@@ -1,7 +1,5 @@
-// =============================
 // CART LOGIC
 // Cart is stored in localStorage so it survives page changes and refreshes.
-// =============================
 
 const CART_KEY = "og_cart";
 
@@ -20,7 +18,7 @@ function saveCart(cart) {
 
 function addToCart(productId) {
   const product = findProduct(productId);
-  if (!product || product.available === false) return; // safety: can't add unavailable items
+  if (!product || product.available === false) return;
 
   const cart = getCart();
   const existing = cart.find(function (item) {
@@ -53,8 +51,6 @@ function changeQty(productId, newQty) {
   });
 
   if (item) {
-    // ✅ FIXED: Allow quantity to go down to 0, but never negative.
-    // It will NOT disappear automatically anymore.
     item.qty = Math.max(0, newQty);
   }
 
@@ -62,7 +58,7 @@ function changeQty(productId, newQty) {
   renderCart();
 }
 
-// NEW: empty the whole cart
+//  empty the whole cart
 function clearCart() {
   saveCart([]);
   renderCart();
@@ -126,7 +122,6 @@ function syncHeartButtons() {
 function renderCart() {
   const cart = getCart();
 
-  // ✅ Sync the hearts on the page immediately
   syncHeartButtons();
 
   const countBadge = document.getElementById("cartCount");
