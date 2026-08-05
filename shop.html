@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop the Collection | OG Signature & Fashion World</title>
+    <script>
+      const savedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      if (savedTheme === "dark" || (!savedTheme && prefersDark))
+        document.documentElement.classList.add("dark");
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Playfair Display"', "serif"],
+              body: ["Inter", "sans-serif"],
+            },
+            colors: {
+              ivory: "#FAF8F4",
+              cream: "#EFE7D8",
+              gold: "#C8A44D",
+              goldDeep: "#8B6512",
+              charcoal: "#111111",
+              night: "#1A1A1A",
+              ink: "#2C2C2C",
+              pearl: "#F5F5F5",
+            },
+            boxShadow: {
+              luxury: "0 28px 90px rgba(17,17,17,0.16)",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="./images//logo2.jpeg" />
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      .dark {
+        color-scheme: dark;
+      }
+      .gold-button {
+        background-color: #c8a44d;
+        transition:
+          background-color 300ms ease,
+          transform 300ms ease;
+      }
+      .gold-button:hover {
+        background-color: #b08e3d;
+        transform: translateY(-2px);
+      }
+      .focus-ring:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(200, 164, 77, 0.3);
+      }
+      .hover-glow {
+        border: 1px solid transparent;
+        transition:
+          transform 300ms ease,
+          box-shadow 300ms ease,
+          border-color 300ms ease;
+      }
+      .hover-glow:hover {
+        transform: translateY(-4px);
+        box-shadow:
+          0 20px 25px -5px rgba(0, 0, 0, 0.05),
+          0 10px 10px -5px rgba(0, 0, 0, 0.02);
+        border-color: #c8a44d;
+      }
+      .nav-link.active {
+        color: #c8a44d;
+      }
+      .nav-link::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 1px;
+        margin-top: 4px;
+        background: #c8a44d;
+        transition: width 250ms ease;
+      }
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 100%;
+      }
+
+      .hamburger-line {
+        transform-origin: center;
+        transition:
+          transform 250ms ease,
+          opacity 250ms ease;
+      }
+      #menuButton[aria-expanded="true"] .hamburger-line:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+      }
+      #menuButton[aria-expanded="true"] .hamburger-line:nth-child(2) {
+        opacity: 0;
+      }
+      #menuButton[aria-expanded="true"] .hamburger-line:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-ivory font-body text-ink antialiased transition-colors duration-500 dark:bg-charcoal dark:text-pearl"
+  >
+    <header
+      id="siteHeader"
+      class="fixed inset-x-0 top-0 z-50 border-b border-gold/15 bg-white/90 text-ink backdrop-blur-sm transition-all duration-300 dark:bg-charcoal/90 dark:text-pearl"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
+      >
+        <a
+          href="./index.html"
+          class="focus-ring flex items-center gap-3 rounded-2xl"
+        >
+          <span
+            class="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border border-gold/25 bg-white shadow-sm dark:bg-night"
+          >
+            <img
+              src="./images/logo.JPG"
+              alt="OG Signature & Fashion World logo"
+              class="aspect-square h-full w-full object-cover dark:hidden"
+            />
+            <img
+              src="./images/logo2.jpeg"
+              alt="OG Signature & Fashion World logo"
+              class="hidden aspect-square h-full w-full object-cover dark:block"
+            />
+          </span>
+          <span class="hidden sm:block"
+            ><span
+              class="block text-xs font-bold uppercase tracking-[0.32em] text-goldDeep dark:text-gold"
+              >OG Signature</span
+            ><span class="block text-sm text-ink/70 dark:text-pearl/70"
+              >Luxury Bespoke Tailoring</span
+            ></span
+          >
+        </a>
+        <nav
+          class="hidden items-center gap-6 text-sm font-semibold uppercase tracking-[0.18em] text-ink/70 dark:text-pearl/70 lg:flex"
+          aria-label="Primary navigation"
+        >
+          <a class="nav-link focus-ring rounded-lg" href="./index.html#home"
+            >Home</a
+          >
+          <a class="nav-link focus-ring rounded-lg" href="./index.html#about"
+            >About</a
+          >
+          <a class="nav-link focus-ring rounded-lg" href="./index.html#contact"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex items-center gap-2">
+          <button
+            onclick="openCart()"
+            type="button"
+            class="focus-ring relative inline-flex h-11 w-11 items-center justify-center rounded-full border border-gold/20 bg-white text-goldDeep shadow-sm transition hover:border-gold dark:bg-night dark:text-gold"
+            aria-label="Open cart"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              class="h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M6 6h15l-1.5 9h-12z"></path>
+              <path d="M6 6L5 3H2"></path>
+              <circle cx="9" cy="20" r="1"></circle>
+              <circle cx="18" cy="20" r="1"></circle>
+            </svg>
+            <span
+              id="cartCount"
+              class="absolute -top-1 -right-1 hidden h-5 w-5 items-center justify-center rounded-full bg-gold text-[10px] font-bold text-white"
+              >0</span
+            >
+          </button>
+          <button
+            id="themeToggle"
+            class="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full border border-gold/20 bg-white text-goldDeep shadow-sm transition hover:border-gold dark:bg-night dark:text-gold"
+            type="button"
+            aria-label="Toggle dark mode"
+          >
+            <span id="themeIcon" aria-hidden="true">☾</span>
+          </button>
+          <button
+            id="menuButton"
+            class="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full border border-gold/20 bg-white text-ink shadow-sm transition dark:bg-night dark:text-pearl lg:hidden"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              class="h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            >
+              <path class="hamburger-line" d="M4 7h16"></path>
+              <path class="hamburger-line" d="M4 12h16"></path>
+              <path class="hamburger-line" d="M4 17h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        id="mobileMenu"
+        class="hidden border-t border-gold/10 bg-white px-4 py-4 shadow-luxury dark:bg-charcoal/95 lg:hidden"
+      >
+        <nav
+          class="mx-auto grid max-w-7xl gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-ink/75 dark:text-pearl/75"
+          aria-label="Mobile navigation"
+        >
+          <a
+            class="mobile-link rounded-2xl px-4 py-3 hover:bg-gold/10"
+            href="./index.html#home"
+            >Home</a
+          >
+          <a
+            class="mobile-link rounded-2xl px-4 py-3 hover:bg-gold/10"
+            href="./index.html#about"
+            >About</a
+          >
+
+          <a
+            class="mobile-link rounded-2xl px-4 py-3 hover:bg-gold/10"
+            href="./index.html#contact"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN SHOP CONTENT -->
+    <main
+      class="mx-auto max-w-7xl px-4 pt-24 pb-24 sm:px-6 lg:pt-28 lg:px-8 border-t border-gold/5 dark:border-white/5"
+    >
+      <div class="max-w-2xl">
+        <p
+          class="text-xs font-bold uppercase tracking-[0.34em] text-goldDeep dark:text-gold"
+        >
+          Shop
+        </p>
+        <h1 class="mt-4 font-display text-4xl font-bold sm:text-5xl">
+          The Full Collection
+        </h1>
+        <p class="mt-4 text-sm leading-7 text-ink/70 dark:text-pearl/70">
+          Explore our latest pieces, each created with the same craftsmanship
+          found in our bespoke tailoring.
+        </p>
+      </div>
+
+      <!-- Sidebar + product grid -->
+      <div class="mt-12 grid gap-8 lg:grid-cols-[220px_1fr]">
+        <!-- Mobile Dropdown Filter (Hidden on Desktop) -->
+        <div class="lg:hidden relative mb-4">
+          <!-- We leave this blank! JS will auto-fill it with your actual categories -->
+          <select
+            id="mobileCategorySelect"
+            onchange="selectCategory(this.value)"
+            class="w-full appearance-none rounded-xl border border-gold/20 bg-white px-4 py-3 text-sm font-bold text-charcoal dark:bg-night dark:text-pearl focus:outline-none focus:border-gold"
+          ></select>
+          <i
+            class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-gold pointer-events-none"
+          ></i>
+        </div>
+
+        <!-- Desktop Sidebar -->
+        <aside
+          id="shopSidebar"
+          class="hidden lg:flex gap-2 overflow-x-auto lg:flex-col lg:overflow-visible"
+        ></aside>
+
+        <!-- Product grid for the selected category -->
+        <div>
+          <h2
+            id="shopCategoryHeading"
+            class="font-display text-2xl font-bold text-charcoal dark:text-pearl sm:text-3xl"
+          ></h2>
+          <div
+            id="shopGrid"
+            class="mt-6 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3"
+          ></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-gold/15 bg-white py-14 dark:bg-charcoal/70">
+      <div
+        class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 md:grid-cols-4 lg:px-8"
+      >
+        <div>
+          <div
+            class="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border border-gold/25 bg-white dark:bg-night"
+          >
+            <img
+              src="./images/logo.JPG"
+              alt="OG Signature & Fashion World logo"
+              class="aspect-square h-full w-full object-cover dark:hidden"
+            />
+            <img
+              src="./images/logo2.jpeg"
+              alt="OG Signature & Fashion World logo"
+              class="hidden aspect-square h-full w-full object-cover dark:block"
+            />
+          </div>
+          <p class="mt-4 text-sm leading-7 text-ink/60 dark:text-pearl/60">
+            Your satisfaction is our priority.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-bold">Quick Links</h3>
+          <div class="mt-4 grid gap-2 text-sm text-ink/60 dark:text-pearl/60">
+            <a href="./index.html">Home</a><a href="./index.html#about">About</a
+            ><a href="./shop.html">Shop</a
+            ><a href="./index.html#contact">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-bold">Services</h3>
+          <div class="mt-4 grid gap-2 text-sm text-ink/60 dark:text-pearl/60">
+            <span>Native Wear</span><span>Agbada</span
+            ><span>Suits & Blazers</span><span>Wedding Attire</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-bold">Social & Contact</h3>
+          <div class="mt-4 grid gap-3 text-sm text-ink/60 dark:text-pearl/60">
+            <a
+              href="https://www.instagram.com/og_fashion_bespoke"
+              target="_blank"
+              rel="noopener"
+              class="flex items-center gap-3 hover:text-gold transition-colors"
+              ><i class="fa-brands fa-instagram text-base"></i> Instagram</a
+            >
+            <a
+              href="https://www.facebook.com/share/1bwtx7Sxif/"
+              target="_blank"
+              rel="noopener"
+              class="flex items-center gap-3 hover:text-gold transition-colors"
+              ><i class="fa-brands fa-facebook-f text-base"></i> Facebook</a
+            >
+            <a
+              href="https://wa.me/2348159355348"
+              class="flex items-center gap-3 hover:text-gold transition-colors"
+              ><i class="fa-brands fa-whatsapp text-base"></i> WhatsApp</a
+            >
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-phone text-base"></i
+              ><span>0815 935 5348</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-location-dot text-base"></i
+              ><span>Ibadan, Nigeria</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mx-auto mt-8 max-w-7xl px-4 text-sm text-ink/50 dark:text-pearl/50 sm:px-6 lg:px-8"
+      >
+        © <span id="year"></span> OG Signature & Fashion World. All rights
+        reserved.
+      </div>
+    </footer>
+
+    <!-- CART PANEL -->
+    <div
+      id="cartOverlay"
+      onclick="closeCart()"
+      class="fixed inset-0 z-[60] hidden bg-charcoal/50"
+    ></div>
+    <aside
+      id="cartPanel"
+      class="fixed inset-y-0 right-0 z-[70] flex w-full max-w-sm translate-x-full flex-col bg-ivory transition-transform duration-300 dark:bg-night"
+    >
+      <div
+        class="flex items-center justify-between border-b border-gold/15 px-6 py-5"
+      >
+        <div class="flex items-center gap-3">
+          <h2
+            class="font-display text-xl font-bold text-charcoal dark:text-pearl"
+          >
+            Your Cart
+          </h2>
+        </div>
+        <button
+          onclick="closeCart()"
+          class="focus-ring h-9 w-9 rounded-full text-ink/60 hover:bg-gold/10 dark:text-pearl/60"
+          aria-label="Close cart"
+        >
+          ✕
+        </button>
+      </div>
+      <div class="flex-1 overflow-y-auto px-6">
+        <p
+          id="cartEmpty"
+          class="py-10 text-center text-sm text-ink/50 dark:text-pearl/50"
+        >
+          Your cart is empty.
+        </p>
+        <div id="cartItems"></div>
+      </div>
+      <button
+        onclick="clearCart()"
+        class="focus-ring py-5 text-[11px] font-bold uppercase tracking-wide text-ink/40 hover:text-ink/70 dark:text-pearl/40"
+      >
+        Clear all
+      </button>
+      <div class="border-t border-gold/15 px-6 py-5">
+        <div
+          class="flex items-center justify-between text-sm font-semibold text-charcoal dark:text-pearl"
+        >
+          <span>Total</span><span id="cartTotal">₦0</span>
+        </div>
+        <a
+          id="cartWhatsappLink"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          class="gold-button focus-ring mt-4 flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-lg transition-all duration-300 hover:shadow-gold"
+          >Order via WhatsApp</a
+        >
+      </div>
+    </aside>
+
+    <script src="./products.js"></script>
+    <script src="./cart.js"></script>
+    <script src="./shop-render.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

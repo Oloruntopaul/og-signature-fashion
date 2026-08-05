@@ -1,0 +1,1560 @@
+﻿<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      OG Signature & Fashion World | Luxury Bespoke Tailoring in Ibadan
+    </title>
+    <meta
+      name="description"
+      content="Luxury bespoke tailoring in Ibadan, Nigeria for native wear, agbada, suits, blazers, shirts, trousers, wedding attire, and ready-to-wear."
+    />
+    <meta name="theme-color" content="#FAF8F4" />
+    <script>
+      const savedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+        document.documentElement.classList.add("dark");
+        document
+          .querySelector('meta[name="theme-color"]')
+          .setAttribute("content", "#111111");
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Playfair Display"', "serif"],
+              body: ["Inter", "sans-serif"],
+            },
+            colors: {
+              ivory: "#FAF8F4",
+              cream: "#EFE7D8",
+              gold: "#C8A44D",
+              goldDeep: "#8B6512",
+              charcoal: "#111111",
+              night: "#1A1A1A",
+              ink: "#2C2C2C",
+              pearl: "#F5F5F5",
+            },
+            boxShadow: {
+              luxury: "0 28px 90px rgba(17, 17, 17, 0.16)",
+              gold: "0 18px 55px rgba(200, 164, 77, 0.20)",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="./images//logo2.jpeg" />
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      .dark {
+        color-scheme: dark;
+      }
+      body {
+        background-color: #faf8f4;
+      }
+      .dark body {
+        background-color: #111111;
+      }
+
+      .section-space {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+      @media (min-width: 1024px) {
+        .section-space {
+          padding-top: 6rem;
+          padding-bottom: 6rem;
+        }
+      }
+
+      .gold-button {
+        position: relative;
+        overflow: hidden;
+        background-color: #c8a44d;
+      }
+      .gold-button::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        transform: translateX(-100%);
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.28),
+          transparent
+        );
+        transition: transform 650ms ease;
+      }
+      .gold-button:hover::after {
+        transform: translateX(100%);
+      }
+      .hover-glow {
+        transition:
+          box-shadow 300ms ease,
+          border-color 300ms ease;
+        border: 1px solid transparent;
+      }
+      .hover-glow:hover {
+        border-color: #c8a44d;
+        box-shadow: 0 0 20px rgba(200, 164, 77, 0.35);
+      }
+      .nav-link.active {
+        color: #c8a44d;
+      }
+      .nav-link::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 1px;
+        margin-top: 4px;
+        background: #c8a44d;
+        transition: width 250ms ease;
+      }
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 100%;
+      }
+      .hamburger-line {
+        transform-origin: center;
+        transition:
+          transform 250ms ease,
+          opacity 250ms ease;
+      }
+      #menuButton[aria-expanded="true"] .hamburger-line:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+      }
+      #menuButton[aria-expanded="true"] .hamburger-line:nth-child(2) {
+        opacity: 0;
+      }
+      #menuButton[aria-expanded="true"] .hamburger-line:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 750ms ease,
+          transform 750ms ease;
+      }
+      .reveal.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .focus-ring:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(200, 164, 77, 0.28);
+      }
+      .marquee-track {
+        animation: marquee 28s linear infinite;
+      }
+
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      @keyframes slide {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .testimonial-track {
+        display: flex;
+        animation: slide 40s linear infinite;
+        width: max-content;
+      }
+      .testimonial-track:hover {
+        animation-play-state: paused;
+      }
+      .animate-bounce-right {
+        animation: bounceRight 2s ease-in-out infinite;
+      }
+      @keyframes bounceRight {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(6px);
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="font-body text-ink antialiased transition-colors duration-500 dark:text-pearl"
+  >
+    <header
+      id="siteHeader"
+      class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-white/15 text-ink backdrop-blur-md transition-all duration-300 dark:bg-charcoal/20 dark:text-pearl"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
+      >
+        <a
+          href="#home"
+          class="focus-ring flex items-center gap-3 rounded-2xl"
+          aria-label="Go to home"
+        >
+          <span
+            class="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border border-gold/25 bg-white shadow-sm dark:bg-night"
+          >
+            <img
+              src="./images/logo.JPG"
+              alt="OG Signature & Fashion World logo"
+              class="aspect-square h-full w-full object-cover dark:hidden"
+            />
+            <img
+              src="./images/logo2.jpeg"
+              alt="OG Signature & Fashion World logo"
+              class="hidden aspect-square h-full w-full object-cover dark:block"
+            />
+          </span>
+          <span class="hidden sm:block"
+            ><span
+              class="block text-xs font-bold uppercase tracking-[0.32em] text-goldDeep dark:text-gold"
+              >OG Signature</span
+            ><span class="block text-sm text-ink/70 dark:text-pearl/70"
+              >Luxury Bespoke Tailoring</span
+            ></span
+          >
+        </a>
+        <nav
+          class="hidden items-center gap-6 text-sm font-semibold uppercase tracking-[0.18em] text-ink/70 dark:text-pearl/70 lg:flex"
+          aria-label="Primary navigation"
+        >
+          <a class="nav-link focus-ring rounded-lg" href="#home">Home</a
+          ><a class="nav-link focus-ring rounded-lg" href="#about">About</a
+          ><a class="nav-link focus-ring rounded-lg" href="./shop.html">Shop</a
+          ><a class="nav-link focus-ring rounded-lg" href="#services"
+            >Services</a
+          ><a class="nav-link focus-ring rounded-lg" href="#collection"
+            >Collection</a
+          ><a class="nav-link focus-ring rounded-lg" href="#process">Process</a
+          ><a class="nav-link focus-ring rounded-lg" href="#contact">Contact</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <a
+            href="./shop.html"
+            class="lg:hidden flex flex-col items-center justify-center h-11 w-11 rounded-full border border-gold/20 bg-white text-goldDeep shadow-sm transition hover:border-gold dark:bg-night dark:text-gold"
+            aria-label="Go to shop"
+          >
+            <i class="fa-solid fa-store text-sm"></i>
+            <span
+              class="text-[6px] font-bold uppercase tracking-wider text-goldDeep dark:text-gold mt-0.5"
+              >Shop</span
+            >
+          </a>
+          <button
+            onclick="openCart()"
+            type="button"
+            class="focus-ring relative inline-flex h-11 w-11 items-center justify-center rounded-full border border-gold/20 bg-white/75 text-goldDeep shadow-sm transition hover:border-gold dark:bg-night/75 dark:text-gold"
+            aria-label="Open cart"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              class="h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M6 6h15l-1.5 9h-12z"></path>
+              <path d="M6 6L5 3H2"></path>
+              <circle cx="9" cy="20" r="1"></circle>
+              <circle cx="18" cy="20" r="1"></circle>
+            </svg>
+            <span
+              id="cartCount"
+              class="absolute -top-1 -right-1 hidden h-5 w-5 items-center justify-center rounded-full bg-gold text-[10px] font-bold text-white"
+              >0</span
+            >
+          </button>
+          <button
+            id="themeToggle"
+            class="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full border border-gold/20 bg-white/75 text-goldDeep shadow-sm transition hover:border-gold dark:bg-night/75 dark:text-gold"
+            type="button"
+            aria-label="Toggle dark mode"
+          >
+            <span id="themeIcon" aria-hidden="true">☾</span>
+          </button>
+          <button
+            id="menuButton"
+            class="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full border border-gold/20 bg-white/75 text-ink shadow-sm transition dark:bg-night/75 dark:text-pearl lg:hidden"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              class="h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            >
+              <path class="hamburger-line" d="M4 7h16"></path>
+              <path class="hamburger-line" d="M4 12h16"></path>
+              <path class="hamburger-line" d="M4 17h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        id="mobileMenu"
+        class="hidden border-t border-gold/10 bg-white/95 px-4 py-4 shadow-luxury backdrop-blur-xl dark:bg-charcoal/95 lg:hidden"
+      >
+        <nav
+          class="mx-auto grid max-w-7xl gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-ink/75 dark:text-pearl/75"
+          aria-label="Mobile navigation"
+        >
+          <a
+            class="mobile-link rounded-2xl px-4 py-3 hover:bg-gold/10"
+            href="#home"
+            >Home</a
+          ><a
+            class="mobile-link rounded-2xl px-4 py-3 hover:bg-gold/10"
+            href="#about"
+            >About</a
+          ><a
+            class="mobile-link rounded-2xl px-4 py-3 hover:bg-gold/10"
+            href="./shop.html"
+            >Shop</a
+          ><a
+            class="mobile-link rounded-2xl px-4 py-3 hover:bg-gold/10"
+            href="#services"
+            >Services</a
+          ><a
+            class="mobile-link rounded-2xl px-4 py-3 hover:bg-gold/10"
+            href="#collection"
+            >Collection</a
+          ><a
+            class="mobile-link rounded-2xl px-4 py-3 hover:bg-gold/10"
+            href="#testimonials"
+            >Testimonials</a
+          ><a
+            class="mobile-link rounded-2xl px-4 py-3 hover:bg-gold/10"
+            href="#process"
+            >Process</a
+          ><a
+            class="mobile-link rounded-2xl px-4 py-3 hover:bg-gold/10"
+            href="#contact"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO SECTION (Home) -->
+    <main id="home">
+      <section
+        id="home"
+        class="relative min-h-screen scroll-mt-20 lg:scroll-mt-24 overflow-hidden"
+      >
+        <img
+          src="./images/background.png"
+          alt="OG Signature tailored look"
+          class="absolute inset-0 h-full w-full object-cover object-[76%_20%] lg:object-center"
+          loading="eager"
+        />
+        <div class="absolute inset-0 bg-black/70"></div>
+        <div
+          class="relative mx-auto flex min-h-screen max-w-7xl items-center px-5 pt-24 pb-16 lg:pt-28 lg:pb-20"
+        >
+          <div class="reveal max-w-4xl text-white">
+            <p class="text-xs font-bold uppercase tracking-[0.3em] text-gold">
+              Bespoke Tailoring in Ibadan
+            </p>
+            <h1
+              class="mt-6 max-w-3xl font-display text-5xl font-bold leading-[1.02] sm:text-7xl lg:text-8xl"
+            >
+              OG Signature & Fashion World
+            </h1>
+            <p
+              class="mt-6 max-w-xl text-base leading-8 text-white/75 sm:text-lg"
+            >
+              Premium bespoke tailoring and ready-made pieces designed for men
+              who appreciate timeless craftsmanship.
+            </p>
+
+            <!-- BUTTONS -->
+            <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#contact"
+                class="focus-ring inline-flex justify-center bg-gold px-7 py-4 text-xs font-bold uppercase tracking-[0.2em] text-charcoal transition hover:bg-white dark:hover:bg-pearl dark:hover:text-charcoal"
+                >Book a Fitting</a
+              >
+              <a
+                href="#collection"
+                class="focus-ring inline-flex justify-center border border-white/35 px-7 py-4 text-xs font-bold uppercase tracking-[0.2em] text-white transition hover:border-gold hover:text-gold"
+                >View Collection</a
+              >
+            </div>
+
+            <!-- STATS -->
+            <div
+              class="mt-8 flex max-w-lg flex-wrap gap-8 border-t border-white/35 pt-8"
+            >
+              <div>
+                <p
+                  class="font-display text-3xl font-bold text-gold sm:text-4xl"
+                >
+                  800+
+                </p>
+                <p
+                  class="mt-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/60"
+                >
+                  Satisfied <br />
+                  Clients
+                </p>
+              </div>
+              <div>
+                <p
+                  class="font-display text-3xl font-bold text-gold sm:text-4xl"
+                >
+                  11+
+                </p>
+                <p
+                  class="mt-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/60"
+                >
+                  Years <br />
+                  Experience
+                </p>
+              </div>
+              <div>
+                <p
+                  class="font-display text-3xl font-bold text-gold sm:text-4xl"
+                >
+                  100%
+                </p>
+                <p
+                  class="mt-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/60"
+                >
+                  Custom Fit
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        class="overflow-hidden border-y border-gold/15 bg-gold/70 py-4 dark:bg-night/60"
+      >
+        <div
+          class="marquee-track flex w-max gap-10 whitespace-nowrap text-xs font-bold uppercase tracking-[0.28em] text-goldDeep dark:text-gold"
+        >
+          <span>◆ Native Wear</span>
+          <span>◆ Agbada</span>
+          <span>◆ Suits & Blazers</span>
+          <span>◆ Wedding Attire</span>
+          <span>◆ Ready to Wear</span>
+          <span>◆ Custom Fit</span>
+          <span>◆ Fila</span>
+
+          <span>◆ Native Wear</span>
+          <span>◆ Agbada</span>
+          <span>◆ Suits & Blazers</span>
+          <span>◆ Wedding Attire</span>
+          <span>◆ Ready to Wear</span>
+          <span>◆ Custom Fit</span>
+          <span>◆ Fila</span>
+        </div>
+      </div>
+
+      <!-- ABOUT-->
+      <section
+        id="about"
+        class="section-space mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+      >
+        <div class="grid items-center gap-12 lg:grid-cols-12">
+          <div class="relative reveal hidden lg:block lg:col-span-5">
+            <div class="overflow-hidden rounded-[2.5rem] shadow-luxury">
+              <img
+                src="./images//ceo.png"
+                alt="Tailor working with premium fabric"
+                class="h-[520px] w-full object-cover transition duration-700 hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+            <div
+              class="absolute -bottom-6 -right-6 z-10 flex h-24 w-24 flex-col items-center justify-center rounded-full bg-gold text-darkBg border-4 border-white dark:border-black shadow-xl font-serif"
+            >
+              <span class="text-sm font-bold">Since</span>
+              <span class="text-2xl font-bold">2015</span>
+            </div>
+          </div>
+
+          <div class="reveal lg:col-span-7">
+            <p
+              class="text-xs font-bold uppercase tracking-[0.34em] text-goldDeep dark:text-gold"
+            >
+              Our Story
+            </p>
+            <h2
+              class="mt-4 max-w-3xl font-display text-4xl font-bold text-charcoal dark:text-pearl sm:text-5xl"
+            >
+              A tailoring house built on patience, proportion, and finish.
+            </h2>
+            <p
+              class="mt-6 max-w-3xl text-base leading-8 text-ink/70 dark:text-pearl/70"
+            >
+              OG Signature & Fashion World was founded in
+              <span class="font-bold text-gold">2015</span> with a simple vision
+              to transform quality fabrics into timeless garments that inspire
+              confidence and celebrate African elegance. From classic owambe
+              attire and refined office wear to handcrafted footwear, every
+              piece is created with attention to detail, quality, and lasting
+              style.
+            </p>
+            <p
+              class="mt-4 max-w-3xl text-base leading-8 text-ink/70 dark:text-pearl/70"
+            >
+              Beyond creating exceptional fashion, the brand is committed to
+              empowering skilled artisans by creating opportunities for growth,
+              employment, and craftsmanship. Our goal has always been to build
+              more than a fashion house—we strive to create a legacy of
+              excellence, creativity, and impact.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-8">
+              <div class="border-l-4 border-gold pl-5">
+                <span class="block font-serif text-2xl font-bold text-gold"
+                  >2015</span
+                >
+                <span
+                  class="text-[10px] uppercase tracking-widest text-ink/60 dark:text-pearl/60"
+                  >The Foundation</span
+                >
+              </div>
+              <div class="border-l-4 border-gold pl-5">
+                <span class="block font-serif text-2xl font-bold text-gold"
+                  >100%</span
+                >
+                <span
+                  class="text-[10px] uppercase tracking-widest text-ink/60 dark:text-pearl/60"
+                  >Hand-Finished</span
+                >
+              </div>
+              <div class="border-l-4 border-gold pl-5">
+                <span class="block font-serif text-2xl font-bold text-gold"
+                  >10+</span
+                >
+                <span
+                  class="text-[10px] uppercase tracking-widest text-ink/60 dark:text-pearl/60"
+                  >Years of Craft</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section
+        id="services"
+        class="section-space scroll-mt-20 lg:scroll-mt-24 bg-white transition-colors dark:bg-[#1E1E1E] border-t border-gold/5 dark:border-white/5"
+      >
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="reveal mb-14 text-center">
+            <p
+              class="text-xs font-bold uppercase tracking-[0.34em] text-gold dark:text-gold"
+            >
+              What We Create
+            </p>
+            <h2
+              class="mt-3 font-display text-4xl font-bold text-charcoal dark:text-pearl sm:text-5xl"
+            >
+              Featured Services
+            </h2>
+            <div class="mx-auto mt-4 h-[1px] w-16 bg-gold/60"></div>
+            <p class="mt-5 text-sm text-ink/70 dark:text-pearl/70">
+              From timeless native wear to refined formal tailoring, every piece
+              is crafted with purpose.
+            </p>
+          </div>
+
+          <div class="reveal grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+            <!-- Service 1 -->
+            <article
+              class="group relative flex flex-col overflow-hidden rounded-2xl hover-glow rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-night/60"
+            >
+              <div class="overflow-hidden aspect-square">
+                <img
+                  src="./images/ankara.JPG"
+                  alt="Native wear tailoring"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex flex-col p-3 sm:p-4">
+                <span
+                  class="text-[10px] font-bold uppercase tracking-[0.2em] text-gold"
+                  >Native Wear</span
+                >
+                <h3
+                  class="mt-1 font-serif text-sm font-bold text-charcoal dark:text-pearl sm:text-base"
+                >
+                  Senator &amp; Kaftan
+                </h3>
+                <p
+                  class="mt-1.5 hidden text-sm leading-6 text-ink/60 dark:text-pearl/60 sm:block"
+                >
+                  Elegant senator, kaftan, and traditional sets with structured
+                  finishing.
+                </p>
+              </div>
+            </article>
+            <!-- Service 2 -->
+            <article
+              class="group relative flex flex-col overflow-hidden rounded-2xl hover-glow rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-night/60"
+            >
+              <div class="overflow-hidden aspect-square">
+                <img
+                  src="./images/agbada2.jpeg"
+                  alt="Premium agbada"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex flex-col p-3 sm:p-4">
+                <span
+                  class="text-[10px] font-bold uppercase tracking-[0.2em] text-gold"
+                  >Agbada</span
+                >
+                <h3
+                  class="mt-1 font-serif text-sm font-bold text-charcoal dark:text-pearl sm:text-base"
+                >
+                  Royal Ceremonial Sets
+                </h3>
+                <p
+                  class="mt-1.5 hidden text-sm leading-6 text-ink/60 dark:text-pearl/60 sm:block"
+                >
+                  Commanding ceremonial pieces with rich fabric presence and
+                  detail.
+                </p>
+              </div>
+            </article>
+            <!-- Service 3 -->
+            <article
+              class="group relative flex flex-col overflow-hidden rounded-2xl hover-glow rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-night/60"
+            >
+              <div class="overflow-hidden aspect-square">
+                <img
+                  src="./images/suit.jpeg"
+                  alt="Luxury suit"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex flex-col p-3 sm:p-4">
+                <span
+                  class="text-[10px] font-bold uppercase tracking-[0.2em] text-gold"
+                  >Suits &amp; Blazers</span
+                >
+                <h3
+                  class="mt-1 font-serif text-sm font-bold text-charcoal dark:text-pearl sm:text-base"
+                >
+                  Sharp Formalwear
+                </h3>
+                <p
+                  class="mt-1.5 hidden text-sm leading-6 text-ink/60 dark:text-pearl/60 sm:block"
+                >
+                  Sharp formalwear for business, events, weddings, and
+                  milestones.
+                </p>
+              </div>
+            </article>
+            <!-- Service 4 -->
+            <article
+              class="group relative flex flex-col overflow-hidden rounded-2xl hover-glow rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-night/60"
+            >
+              <div class="overflow-hidden aspect-square">
+                <img
+                  src="./images//weddingattire.jpeg"
+                  alt="Wedding attire"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex flex-col p-3 sm:p-4">
+                <span
+                  class="text-[10px] font-bold uppercase tracking-[0.2em] text-gold"
+                  >Wedding Attire</span
+                >
+                <h3
+                  class="mt-1 font-serif text-sm font-bold text-charcoal dark:text-pearl sm:text-base"
+                >
+                  Timeless Wedding Sets
+                </h3>
+                <p
+                  class="mt-1.5 hidden text-sm leading-6 text-ink/60 dark:text-pearl/60 sm:block"
+                >
+                  Exquisite wedding attire for grooms, groomsmen, and
+                  traditional ceremonies.
+                </p>
+              </div>
+            </article>
+            <!-- Service 5 -->
+            <article
+              class="group relative flex flex-col overflow-hidden rounded-2xl hover-glow rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-night/60"
+            >
+              <div class="overflow-hidden aspect-square">
+                <img
+                  src="./images/shirtss.jpeg"
+                  alt="Premium shirts"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex flex-col p-3 sm:p-4">
+                <span
+                  class="text-[10px] font-bold uppercase tracking-[0.2em] text-gold"
+                  >Shirts</span
+                >
+                <h3
+                  class="mt-1 font-serif text-sm font-bold text-charcoal dark:text-pearl sm:text-base"
+                >
+                  Clean Dress &amp; Casual
+                </h3>
+                <p
+                  class="mt-1.5 hidden text-sm leading-6 text-ink/70 dark:text-pearl/70 sm:block"
+                >
+                  Clean dress shirts and casual shirts with smart finishing.
+                </p>
+              </div>
+            </article>
+            <!-- Service 6 -->
+            <article
+              class="group relative flex flex-col overflow-hidden rounded-2xl hover-glow rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-night/60"
+            >
+              <div class="overflow-hidden aspect-square">
+                <img
+                  src="./images/pant-trouser.png"
+                  alt="Structured trousers"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex flex-col p-3 sm:p-4">
+                <span
+                  class="text-[10px] font-bold uppercase tracking-[0.2em] text-gold"
+                  >Trousers</span
+                >
+                <h3
+                  class="mt-1 font-serif text-sm font-bold text-charcoal dark:text-pearl sm:text-base"
+                >
+                  Structured Fit
+                </h3>
+                <p
+                  class="mt-1.5 hidden text-sm leading-6 text-ink/70 dark:text-pearl/70 sm:block"
+                >
+                  Well-cut trousers shaped for comfort, structure, and style.
+                </p>
+              </div>
+            </article>
+            <!-- Service 7 -->
+            <article
+              class="group relative flex flex-col overflow-hidden rounded-2xl hover-glow rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-night/60"
+            >
+              <div class="overflow-hidden aspect-square">
+                <img
+                  src="./images/readymade.jpeg"
+                  alt="Ready to wear"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex flex-col p-3 sm:p-4">
+                <span
+                  class="text-[10px] font-bold uppercase tracking-[0.2em] text-gold"
+                  >Ready-to-Wear</span
+                >
+                <h3
+                  class="mt-1 font-serif text-sm font-bold text-charcoal dark:text-pearl sm:text-base"
+                >
+                  Elegant Everyday Pieces
+                </h3>
+                <p
+                  class="mt-1.5 hidden text-sm leading-6 text-ink/70 dark:text-pearl/70 sm:block"
+                >
+                  Elegant everyday pieces available for quick styling.
+                </p>
+              </div>
+            </article>
+            <!-- Service 8 -->
+            <article
+              class="group relative flex flex-col overflow-hidden rounded-2xl hover-glow rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-night/60"
+            >
+              <div class="overflow-hidden aspect-square">
+                <img
+                  src="./images/filas.png"
+                  alt="Accessories details"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex flex-col p-3 sm:p-4">
+                <span
+                  class="text-[10px] font-bold uppercase tracking-[0.2em] text-gold"
+                  >Fila & Details</span
+                >
+                <h3
+                  class="mt-1 font-serif text-sm font-bold text-charcoal dark:text-pearl sm:text-base"
+                >
+                  Crafted with Precision
+                </h3>
+                <p
+                  class="mt-1.5 hidden text-sm leading-6 text-ink/70 dark:text-pearl/70 sm:block"
+                >
+                  Accessories and finishing touches that complete the look.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- COLLECTION TEASER -->
+      <section
+        id="collection"
+        class="section-space scroll-mt-20 lg:scroll-mt-24 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+      >
+        <div class="reveal mb-14 text-center">
+          <p
+            class="text-xs font-bold uppercase tracking-[0.34em] text-gold dark:text-gold"
+          >
+            The Collection
+          </p>
+          <h2
+            class="mt-3 font-display text-4xl font-bold text-charcoal dark:text-pearl sm:text-5xl"
+          >
+            Pieces crafted to be worn with confidence.
+          </h2>
+          <div class="mx-auto mt-4 h-[1px] w-16 bg-gold/60"></div>
+          <p class="mt-5 text-sm text-ink/70 dark:text-pearl/70">
+            Browse our latest handcrafted pieces available for immediate order.
+          </p>
+        </div>
+        <div
+          id="collectionGrid"
+          class="reveal mt-14 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4"
+        ></div>
+        <div class="reveal mt-12 text-center">
+          <a
+            href="./shop.html"
+            class="focus-ring inline-flex rounded-full border border-gold/40 px-7 py-3 text-xs font-bold uppercase tracking-[0.18em] text-goldDeep transition hover:bg-gold hover:text-white dark:text-gold dark:hover:text-white"
+            >View Full Collection</a
+          >
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section
+        id="testimonials"
+        class="section-space scroll-mt-20 lg:scroll-mt-24 relative bg-charcoal dark:bg-[#0A0A0A] text-pearl overflow-hidden border-y border-gold/5 dark:border-white/5"
+      >
+        <div
+          class="absolute inset-y-0 left-0 z-20 w-16 sm:w-32 bg-gradient-to-r from-charcoal to-transparent pointer-events-none"
+        ></div>
+        <div
+          class="absolute inset-y-0 right-0 z-20 w-16 sm:w-32 bg-gradient-to-l from-charcoal to-transparent pointer-events-none"
+        ></div>
+        <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="reveal max-w-3xl">
+            <p class="text-xs font-bold uppercase tracking-[0.34em] text-gold">
+              Testimonials
+            </p>
+            <h2
+              class="mt-4 font-display text-4xl font-bold sm:text-5xl text-pearl"
+            >
+              Trusted by clients who notice details.
+            </h2>
+          </div>
+          <div class="testimonial-track mt-10 gap-4 px-6">
+            <article
+              class="w-[260px] shrink-0 rounded-2xl border border-white/5 bg-white/5 p-4 text-center backdrop-blur-sm shadow-lg flex flex-col items-center"
+            >
+              <div class="text-5xl font-serif text-gold/20 leading-none -mb-2">
+                “
+              </div>
+              <p class="text-sm leading-relaxed text-pearl/80">
+                “The fitting was calm and professional. My agbada came out
+                clean, rich, and exactly how I wanted it.”
+              </p>
+              <p
+                class="mt-5 text-[10px] font-bold uppercase tracking-[0.2em] text-gold"
+              >
+                Adeosun M.
+              </p>
+              <div class="w-4 h-[1px] bg-gold/40 my-1"></div>
+              <p class="text-[10px] text-pearl/40">Ibadan</p>
+            </article>
+            <article
+              class="w-[260px] shrink-0 rounded-2xl border border-white/5 bg-white/5 p-4 text-center backdrop-blur-sm shadow-lg flex flex-col items-center"
+            >
+              <div class="text-5xl font-serif text-gold/20 leading-none -mb-2">
+                “
+              </div>
+              <p class="text-sm leading-relaxed text-pearl/80">
+                “My suit looked expensive without shouting. The shoulders,
+                trousers, and finishing were very sharp.”
+              </p>
+              <p
+                class="mt-5 text-[10px] font-bold uppercase tracking-[0.2em] text-gold"
+              >
+                Grooom Tunde G.
+              </p>
+              <div class="w-4 h-[1px] bg-gold/40 my-1"></div>
+              <p class="text-[10px] text-pearl/40">Dugbe</p>
+            </article>
+            <article
+              class="w-[260px] shrink-0 rounded-2xl border border-white/5 bg-white/5 p-4 text-center backdrop-blur-sm shadow-lg flex flex-col items-center"
+            >
+              <div class="text-5xl font-serif text-gold/20 leading-none -mb-2">
+                “
+              </div>
+              <p class="text-sm leading-relaxed text-pearl/80">
+                “Reliable service, beautiful fabric advice, and a very neat
+                final outfit. I will definitely return.”
+              </p>
+              <p
+                class="mt-5 text-[10px] font-bold uppercase tracking-[0.2em] text-gold"
+              >
+                Mr OLuwaseun B.
+              </p>
+              <div class="w-4 h-[1px] bg-gold/40 my-1"></div>
+              <p class="text-[10px] text-pearl/40">liverpool</p>
+            </article>
+
+            <!-- DUPLICATE FOR LOOP -->
+            <article
+              class="w-[260px] shrink-0 rounded-2xl border border-white/5 bg-white/5 p-4 text-center backdrop-blur-sm shadow-lg flex flex-col items-center"
+            >
+              <div class="text-5xl font-serif text-gold/20 leading-none -mb-2">
+                “
+              </div>
+              <p class="text-sm leading-relaxed text-pearl/80">
+                “The fitting was calm and professional. My agbada came out
+                clean, rich, and exactly how I wanted it.”
+              </p>
+              <p
+                class="mt-5 text-[10px] font-bold uppercase tracking-[0.2em] text-gold"
+              >
+                Adeosun M.
+              </p>
+              <div class="w-4 h-[1px] bg-gold/40 my-1"></div>
+              <p class="text-[10px] text-pearl/40">Ibadan</p>
+            </article>
+            <article
+              class="w-[260px] shrink-0 rounded-2xl border border-white/5 bg-white/5 p-4 text-center backdrop-blur-sm shadow-lg flex flex-col items-center"
+            >
+              <div class="text-5xl font-serif text-gold/20 leading-none -mb-2">
+                “
+              </div>
+              <p class="text-sm leading-relaxed text-pearl/80">
+                “My suit looked expensive without shouting. The shoulders,
+                trousers, and finishing were very sharp.”
+              </p>
+              <p
+                class="mt-5 text-[10px] font-bold uppercase tracking-[0.2em] text-gold"
+              >
+                Grooom Tunde G.
+              </p>
+              <div class="w-4 h-[1px] bg-gold/40 my-1"></div>
+              <p class="text-[10px] text-pearl/40">Dugbe</p>
+            </article>
+            <article
+              class="w-[260px] shrink-0 rounded-2xl border border-white/5 bg-white/5 p-4 text-center backdrop-blur-sm shadow-lg flex flex-col items-center"
+            >
+              <div class="text-5xl font-serif text-gold/20 leading-none -mb-2">
+                “
+              </div>
+              <p class="text-sm leading-relaxed text-pearl/80">
+                “Reliable service, beautiful fabric advice, and a very neat
+                final outfit. I will definitely return.”
+              </p>
+              <p
+                class="mt-5 text-[10px] font-bold uppercase tracking-[0.2em] text-gold"
+              >
+                Mr OLuwaseun B.
+              </p>
+              <div class="w-4 h-[1px] bg-gold/40 my-1"></div>
+              <p class="text-[10px] text-pearl/40">liverpool</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--  PROCESS SECTION -->
+      <section
+        id="process"
+        class="section-space scroll-mt-20 lg:scroll-mt-24 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 overflow-hidden border-t border-gold/5 dark:border-white/5"
+      >
+        <div class="reveal text-center">
+          <p
+            class="text-xs font-bold uppercase tracking-[0.34em] text-goldDeep dark:text-gold"
+          >
+            Process
+          </p>
+          <h2
+            class="mt-4 font-display text-4xl font-bold text-charcoal dark:text-pearl sm:text-5xl"
+          >
+            From consultation to delivery.
+          </h2>
+        </div>
+
+        <div class="relative mt-16">
+          <!-- ✅ Mobile Swipe Hint (Hidden on Desktop) -->
+          <div
+            class="absolute -bottom-2 right-4 z-20 lg:hidden flex items-center gap-2 text-gold/70"
+          >
+            <span class="text-[9px] font-bold uppercase tracking-[0.2em]"
+              >Swipe</span
+            >
+            <i class="fa-solid fa-arrow-right text-xs animate-bounce-right"></i>
+          </div>
+
+          <div
+            class="flex flex-row overflow-x-auto snap-x snap-mandatory gap-6 pb-6 lg:pb-0 lg:overflow-visible lg:flex-wrap lg:justify-center px-4 sm:px-0 scroll-smooth"
+          >
+            <!-- STEP 01 -->
+            <div
+              class="snap-center flex-shrink-0 w-[280px] md:w-[340px] lg:w-auto lg:flex-1 lg:max-w-[300px] relative"
+            >
+              <div
+                class="relative flex flex-col items-center text-center h-full"
+              >
+                <span
+                  class="absolute -top-5 -right-4 text-8xl font-black font-serif text-gold/5 pointer-events-none select-none block -rotate-6 dark:text-gold/10"
+                  >01</span
+                >
+                <div
+                  class="relative z-10 bg-white dark:bg-night/80 backdrop-blur-sm rounded-2xl border border-gold/20 p-6 shadow-sm hover:shadow-lg transition-all duration-300 w-full h-full flex flex-col items-center justify-start"
+                >
+                  <h3
+                    class="font-display text-lg font-bold text-charcoal dark:text-pearl mb-2"
+                  >
+                    Consultation
+                  </h3>
+                  <p
+                    class="text-sm text-ink/70 dark:text-pearl/70 leading-relaxed"
+                  >
+                    Discuss the occasion, fabric, and preferred style.
+                  </p>
+                </div>
+                <div
+                  class="hidden lg:block absolute top-[calc(50%-36px)] left-[100%] h-[2px] w-6 bg-gold/30 -z-10"
+                ></div>
+              </div>
+            </div>
+
+            <!-- STEP 02 -->
+            <div
+              class="snap-center flex-shrink-0 w-[280px] md:w-[340px] lg:w-auto lg:flex-1 lg:max-w-[300px] relative"
+            >
+              <div
+                class="relative flex flex-col items-center text-center h-full"
+              >
+                <span
+                  class="absolute -top-5 -right-4 text-8xl font-black font-serif text-gold/5 pointer-events-none select-none block -rotate-6 dark:text-gold/10"
+                  >02</span
+                >
+                <div
+                  class="relative z-10 bg-white dark:bg-night/80 backdrop-blur-sm rounded-2xl border border-gold/20 p-6 shadow-sm hover:shadow-lg transition-all duration-300 w-full h-full flex flex-col items-center justify-start"
+                >
+                  <h3
+                    class="font-display text-lg font-bold text-charcoal dark:text-pearl mb-2"
+                  >
+                    Measurements
+                  </h3>
+                  <p
+                    class="text-sm text-ink/70 dark:text-pearl/70 leading-relaxed"
+                  >
+                    Take accurate measurements for comfort and structure.
+                  </p>
+                </div>
+                <div
+                  class="hidden lg:block absolute top-[calc(50%-36px)] left-[100%] h-[2px] w-6 bg-gold/30 -z-10"
+                ></div>
+              </div>
+            </div>
+
+            <!-- STEP 03 -->
+            <div
+              class="snap-center flex-shrink-0 w-[280px] md:w-[340px] lg:w-auto lg:flex-1 lg:max-w-[300px] relative"
+            >
+              <div
+                class="relative flex flex-col items-center text-center h-full"
+              >
+                <span
+                  class="absolute -top-5 -right-4 text-8xl font-black font-serif text-gold/5 pointer-events-none select-none block -rotate-6 dark:text-gold/10"
+                  >03</span
+                >
+                <div
+                  class="relative z-10 bg-white dark:bg-night/80 backdrop-blur-sm rounded-2xl border border-gold/20 p-6 shadow-sm hover:shadow-lg transition-all duration-300 w-full h-full flex flex-col items-center justify-start"
+                >
+                  <h3
+                    class="font-display text-lg font-bold text-charcoal dark:text-pearl mb-2"
+                  >
+                    Tailoring
+                  </h3>
+                  <p
+                    class="text-sm text-ink/70 dark:text-pearl/70 leading-relaxed"
+                  >
+                    Cut, sew, and refine the garment with craftsmanship.
+                  </p>
+                </div>
+                <div
+                  class="hidden lg:block absolute top-[calc(50%-36px)] left-[100%] h-[2px] w-6 bg-gold/30 -z-10"
+                ></div>
+              </div>
+            </div>
+
+            <!-- STEP 04 -->
+            <div
+              class="snap-center flex-shrink-0 w-[280px] md:w-[340px] lg:w-auto lg:flex-1 lg:max-w-[300px] relative"
+            >
+              <div
+                class="relative flex flex-col items-center text-center h-full"
+              >
+                <span
+                  class="absolute -top-5 -right-4 text-8xl font-black font-serif text-gold/5 pointer-events-none select-none block -rotate-6 dark:text-gold/10"
+                  >04</span
+                >
+                <div
+                  class="relative z-10 bg-white dark:bg-night/80 backdrop-blur-sm rounded-2xl border border-gold/20 p-6 shadow-sm hover:shadow-lg transition-all duration-300 w-full h-full flex flex-col items-center justify-start"
+                >
+                  <h3
+                    class="font-display text-lg font-bold text-charcoal dark:text-pearl mb-2"
+                  >
+                    Fitting
+                  </h3>
+                  <p
+                    class="text-sm text-ink/70 dark:text-pearl/70 leading-relaxed"
+                  >
+                    Check proportion, movement, and final adjustments.
+                  </p>
+                </div>
+                <div
+                  class="hidden lg:block absolute top-[calc(50%-36px)] left-[100%] h-[2px] w-6 bg-gold/30 -z-10"
+                ></div>
+              </div>
+            </div>
+
+            <!-- STEP 05 -->
+            <div
+              class="snap-center flex-shrink-0 w-[280px] md:w-[340px] lg:w-auto lg:flex-1 lg:max-w-[300px] relative"
+            >
+              <div
+                class="relative flex flex-col items-center text-center h-full"
+              >
+                <span
+                  class="absolute -top-5 -right-4 text-8xl font-black font-serif text-gold/5 pointer-events-none select-none block -rotate-6 dark:text-gold/10"
+                  >05</span
+                >
+                <div
+                  class="relative z-10 bg-white dark:bg-night/80 backdrop-blur-sm rounded-2xl border border-gold/20 p-6 shadow-sm hover:shadow-lg transition-all duration-300 w-full h-full flex flex-col items-center justify-start"
+                >
+                  <h3
+                    class="font-display text-lg font-bold text-charcoal dark:text-pearl mb-2"
+                  >
+                    Delivery
+                  </h3>
+                  <p
+                    class="text-sm text-ink/70 dark:text-pearl/70 leading-relaxed"
+                  >
+                    Receive a finished piece ready to wear with confidence.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA SECTION -->
+      <section class="section-space relative overflow-hidden">
+        <img
+          src="./images//booknow.png"
+          alt="Book your fitting"
+          class="absolute inset-0 h-full w-full object-cover"
+          loading="lazy"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/80"
+        ></div>
+
+        <div
+          class="relative z-10 mx-auto max-w-4xl px-6 text-center sm:px-8 lg:px-8"
+        >
+          <div class="reveal flex flex-col items-center">
+            <p
+              class="text-[10px] font-bold uppercase tracking-[0.34em] text-gold"
+            >
+              Book Your Look
+            </p>
+            <div class="mt-2 h-[1px] w-8 bg-gold/80"></div>
+            <h2
+              class="reveal mt-6 font-display text-4xl font-bold text-white sm:text-6xl lg:text-7xl leading-tight"
+            >
+              Ready to wear <br class="sm:hidden" />
+              confidence?
+            </h2>
+            <p
+              class="reveal mx-auto mt-5 max-w-xl text-sm leading-7 text-white/80 sm:text-base"
+            >
+              Start with a conversation, then let the fitting, fabric, and
+              finish speak for you.
+            </p>
+            <a
+              href="#contact"
+              class="reveal focus-ring mt-8 inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-xs font-bold uppercase tracking-[0.18em] text-darkBg transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(204,163,84,0.5)]"
+              >Book Appointment</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section
+        id="contact"
+        class="section-space mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+      >
+        <div class="grid gap-6 lg:grid-cols-12">
+          <aside
+            class="reveal rounded-[2.5rem] bg-charcoal p-8 text-pearl shadow-luxury lg:col-span-5"
+          >
+            <p class="text-xs font-bold uppercase tracking-[0.34em] text-gold">
+              Contact
+            </p>
+            <h2 class="mt-4 font-display text-4xl font-bold">
+              Begin your order with clarity.
+            </h2>
+
+            <!-- Contact Details with Icons -->
+            <div class="mt-8 grid gap-4 text-sm">
+              <p class="flex items-center gap-3">
+                <i
+                  class="fa-brands fa-whatsapp text-base text-gold w-5 text-center"
+                ></i>
+                <span class="font-bold text-gold">WhatsApp:</span>
+                <a href="https://wa.me/2348159355348" class="hover:underline"
+                  >0815 935 5348</a
+                >
+              </p>
+              <p class="flex items-center gap-3">
+                <i
+                  class="fa-solid fa-phone text-base text-gold w-5 text-center"
+                ></i>
+                <span class="font-bold text-gold">Phone:</span>
+                <a href="tel:+2348159355348" class="hover:underline"
+                  >0815 935 5348</a
+                >
+              </p>
+              <p class="flex items-center gap-3">
+                <i
+                  class="fa-regular fa-envelope text-base text-gold w-5 text-center"
+                ></i>
+                <span class="font-bold text-gold">Email:</span>
+                <a href="mailto:ayoadesaleem@gmail.com" class="hover:underline"
+                  >ayoadesaleem@gmail.com</a
+                >
+              </p>
+              <p class="flex items-center gap-3">
+                <i
+                  class="fa-regular fa-clock text-base text-gold w-5 text-center"
+                ></i>
+                <span class="font-bold text-gold">Hours:</span>
+                <span>Monday - Saturday, 9:00 AM - 6:00 PM</span>
+              </p>
+              <p class="flex items-center gap-3">
+                <i
+                  class="fa-solid fa-location-dot text-base text-gold w-5 text-center"
+                ></i>
+                <span class="font-bold text-gold">Address:</span>
+                <span>Shop 9&10, Gbetel Complex, Abanla OlogunEru, Ibadan</span>
+              </p>
+            </div>
+
+            <div
+              class="mt-8 overflow-hidden rounded-[2rem] border border-white/10"
+            >
+              <div
+                class="grid min-h-64 place-items-center bg-[linear-gradient(135deg,rgba(200,164,77,0.25),rgba(255,255,255,0.08))] p-8 text-center"
+              >
+                <div>
+                  <p
+                    class="font-display text-2xl font-bold flex items-center justify-center gap-2"
+                  >
+                    <i class="fa-solid fa-location-dot text-gold"></i>
+                    Find Us
+                  </p>
+                  <p class="mt-2 text-sm leading-7 text-pearl/60">
+                    Shop 9&10, Gbethel Complex, Abanla OlogunEru, Ibadan
+                  </p>
+                  <a
+                    href="https://maps.google.com/?q=7.429046,3.830322"
+                    target="_blank"
+                    rel="noopener"
+                    class="focus-ring mt-5 inline-block rounded-full border border-gold/35 px-5 py-3 text-xs font-bold uppercase tracking-[0.18em] text-gold transition hover:bg-gold hover:text-white"
+                    >Open in Google Maps</a
+                  >
+                </div>
+              </div>
+            </div>
+          </aside>
+          <div
+            class="reveal rounded-[2.5rem] border border-gold/15 bg-white/100 p-6 shadow-luxury backdrop-blur dark:bg-night/80 lg:col-span-7 sm:p-8"
+          >
+            <form id="contactForm" class="grid gap-5">
+              <div class="grid gap-5 sm:grid-cols-2">
+                <label class="grid gap-2"
+                  ><span class="text-sm font-bold">Customer name</span
+                  ><input
+                    name="name"
+                    type="text"
+                    class="focus-ring rounded-2xl border border-gold/20 bg-ivory px-5 py-4 text-sm text-ink transition dark:bg-charcoal dark:text-pearl"
+                    placeholder="Enter your name"
+                /></label>
+                <label class="grid gap-2"
+                  ><span class="text-sm font-bold">Phone number</span
+                  ><input
+                    name="phone"
+                    type="tel"
+                    class="focus-ring rounded-2xl border border-gold/20 bg-ivory px-5 py-4 text-sm text-ink transition dark:bg-charcoal dark:text-pearl"
+                    placeholder="080..."
+                /></label>
+              </div>
+              <label class="grid gap-2"
+                ><span class="text-sm font-bold">Service</span
+                ><select
+                  name="service"
+                  class="focus-ring rounded-2xl border border-gold/20 bg-ivory px-5 py-4 text-sm text-ink transition dark:bg-charcoal dark:text-pearl"
+                >
+                  <option>Native Wear</option>
+                  <option>Agbada</option>
+                  <option>Suit</option>
+                  <option>Blazer</option>
+                  <option>Shirt</option>
+                  <option>Trousers</option>
+                  <option>Wedding Attire</option>
+                  <option>Ready-to-Wear</option>
+                </select></label
+              >
+              <label class="grid gap-2"
+                ><span class="text-sm font-bold">Notes</span
+                ><textarea
+                  name="notes"
+                  rows="6"
+                  class="focus-ring rounded-2xl border border-gold/20 bg-ivory px-5 py-4 text-sm text-ink transition dark:bg-charcoal dark:text-pearl"
+                  placeholder="Tell us your style, fabric idea, event date, size, or special request."
+                ></textarea>
+              </label>
+              <div class="flex flex-wrap items-center gap-3">
+                <button
+                  type="submit"
+                  class="gold-button focus-ring rounded-full px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-charcoal/20 transition hover:shadow-gold/50"
+                >
+                  Send via WhatsApp
+                </button>
+                <p
+                  id="statusText"
+                  class="text-sm text-ink/60 dark:text-pearl/60"
+                  role="status"
+                  aria-live="polite"
+                ></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="border-t border-gold/15 bg-white/70 py-14 dark:bg-charcoal/70"
+    >
+      <div
+        class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 md:grid-cols-4 lg:px-8"
+      >
+        <div>
+          <div
+            class="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border border-gold/25 bg-white dark:bg-night"
+          >
+            <img
+              src="./images/logo.JPG"
+              alt="OG Signature & Fashion World logo"
+              class="aspect-square h-full w-full object-cover dark:hidden"
+            />
+            <img
+              src="./images/logo2.jpeg"
+              alt="OG Signature & Fashion World logo"
+              class="hidden aspect-square h-full w-full object-cover dark:block"
+            />
+          </div>
+          <p class="mt-4 text-sm leading-7 text-ink/60 dark:text-pearl/60">
+            Your satisfaction is our priority.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-bold">Quick Links</h3>
+          <div class="mt-4 grid gap-2 text-sm text-ink/60 dark:text-pearl/60">
+            <a href="#about">About</a><a href="#services">Services</a
+            ><a href="#collection">Collection</a><a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-bold">Services</h3>
+          <div class="mt-4 grid gap-2 text-sm text-ink/60 dark:text-pearl/60">
+            <span>Native Wear</span><span>Agbada</span
+            ><span>Suits & Blazers</span><span>Wedding Attire</span>
+          </div>
+        </div>
+        <div class="mt-4 grid gap-3 text-sm text-ink/60 dark:text-pearl/60">
+          <a
+            href="https://www.instagram.com/og_fashion_bespoke"
+            target="_blank"
+            rel="noopener"
+            class="flex items-center gap-3 hover:text-gold transition-colors"
+          >
+            <i class="fa-brands fa-instagram text-base"></i> Instagram
+          </a>
+          <a
+            href="https://www.facebook.com/share/1bwtx7Sxif/"
+            target="_blank"
+            rel="noopener"
+            class="flex items-center gap-3 hover:text-gold transition-colors"
+          >
+            <i class="fa-brands fa-facebook-f text-base"></i> Facebook
+          </a>
+          <a
+            href="https://wa.me/2348159355348"
+            class="flex items-center gap-3 hover:text-gold transition-colors"
+          >
+            <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp
+          </a>
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-phone text-base"></i>
+            <span>0815 935 5348</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-location-dot text-base"></i>
+            <span>Ibadan, Nigeria</span>
+          </div>
+        </div>
+        <div
+          class="mx-auto mt-8 max-w-7xl px-4 text-sm text-ink/50 dark:text-pearl/50 sm:px-6 lg:px-8"
+        >
+          © <span id="year"></span> OG Signature & Fashion World. All rights
+          reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- SLIDE-IN CART PANEL -->
+    <div
+      id="cartOverlay"
+      onclick="closeCart()"
+      class="fixed inset-0 z-[60] hidden bg-charcoal/50"
+    ></div>
+    <aside
+      id="cartPanel"
+      class="fixed inset-y-0 right-0 z-[70] flex w-full max-w-sm translate-x-full flex-col bg-ivory transition-transform duration-300 dark:bg-night"
+    >
+      <div
+        class="flex items-center justify-between border-b border-gold/15 px-6 py-5"
+      >
+        <div class="flex items-center gap-3">
+          <h2
+            class="font-display text-xl font-bold text-charcoal dark:text-pearl"
+          >
+            Your Cart
+          </h2>
+        </div>
+        <button
+          onclick="closeCart()"
+          class="focus-ring h-9 w-9 rounded-full text-ink/60 hover:bg-gold/10 dark:text-pearl/60"
+          aria-label="Close cart"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-5 w-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="flex-1 overflow-y-auto px-6">
+        <p
+          id="cartEmpty"
+          class="py-10 text-center text-sm text-ink/50 dark:text-pearl/50"
+        >
+          Your cart is empty.
+        </p>
+        <div id="cartItems"></div>
+      </div>
+      <button
+        onclick="clearCart()"
+        class="focus-ring text-[11px] font-bold uppercase tracking-wide text-charcoal hover:text-ink/60 dark:text-pearl/70"
+      >
+        Clear all
+      </button>
+      <div class="border-t border-gold/15 px-6 py-5">
+        <div
+          class="flex items-center justify-between text-sm font-semibold text-charcoal dark:text-pearl"
+        >
+          <span>Total</span>
+          <span id="cartTotal">₦0</span>
+        </div>
+        <a
+          id="cartWhatsappLink"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          class="gold-button focus-ring mt-4 flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-gold"
+          >Order via WhatsApp</a
+        >
+      </div>
+    </aside>
+
+    <script src="./products.js"></script>
+    <script src="./cart.js"></script>
+    <script src="./collection-teaser.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
