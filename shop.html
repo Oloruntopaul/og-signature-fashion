@@ -13,44 +13,15 @@
       if (savedTheme === "dark" || (!savedTheme && prefersDark))
         document.documentElement.classList.add("dark");
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            fontFamily: {
-              display: ['"Playfair Display"', "serif"],
-              body: ["Inter", "sans-serif"],
-            },
-            colors: {
-              ivory: "#FAF8F4",
-              cream: "#EFE7D8",
-              gold: "#C8A44D",
-              goldDeep: "#8B6512",
-              charcoal: "#111111",
-              night: "#1A1A1A",
-              ink: "#2C2C2C",
-              pearl: "#F5F5F5",
-            },
-            boxShadow: {
-              luxury: "0 28px 90px rgba(17,17,17,0.16)",
-            },
-          },
-        },
-      };
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="./assets/tailwind.css" />
+
+
+    <link rel="stylesheet" href="./assets/fonts.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      href="./assets/icons.css"
     />
-    <link rel="icon" type="image/png" href="./images//logo2.jpeg" />
+    <link rel="icon" type="image/png" href="./assets/images/logo2.webp" />
     <style>
       :root {
         color-scheme: light;
@@ -139,13 +110,13 @@
           <span
             class="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border border-gold/25 bg-white shadow-sm dark:bg-night"
           >
-            <img
-              src="./images/logo.JPG"
+            <img decoding="async" width="107" height="160"
+              src="./assets/images/logo.webp"
               alt="OG Signature & Fashion World logo"
               class="aspect-square h-full w-full object-cover dark:hidden"
             />
-            <img
-              src="./images/logo2.jpeg"
+            <img decoding="async" width="107" height="160"
+              src="./assets/images/logo2.webp"
               alt="OG Signature & Fashion World logo"
               class="hidden aspect-square h-full w-full object-cover dark:block"
             />
@@ -321,13 +292,13 @@
           <div
             class="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border border-gold/25 bg-white dark:bg-night"
           >
-            <img
-              src="./images/logo.JPG"
+            <img decoding="async" width="107" height="160"
+              src="./assets/images/logo.webp"
               alt="OG Signature & Fashion World logo"
               class="aspect-square h-full w-full object-cover dark:hidden"
             />
-            <img
-              src="./images/logo2.jpeg"
+            <img decoding="async" width="107" height="160"
+              src="./assets/images/logo2.webp"
               alt="OG Signature & Fashion World logo"
               class="hidden aspect-square h-full w-full object-cover dark:block"
             />

@@ -1,0 +1,15 @@
+/* Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com/license/free (icons CC BY 4.0, fonts SIL OFL 1.1, code MIT) */
+@font-face{font-family:'Font Awesome 6 Free';font-style:normal;font-weight:900;font-display:swap;src:url('./fa-solid-900.woff2') format('woff2')}.fa-solid{font-family:'Font Awesome 6 Free';font-weight:900}
+@font-face{font-family:'Font Awesome 6 Free';font-style:normal;font-weight:400;font-display:swap;src:url('./fa-regular-400.woff2') format('woff2')}.fa-regular{font-family:'Font Awesome 6 Free';font-weight:400}
+@font-face{font-family:'Font Awesome 6 Brands';font-style:normal;font-weight:400;font-display:swap;src:url('./fa-brands-400.woff2') format('woff2')}.fa-brands{font-family:'Font Awesome 6 Brands';font-weight:400}
+.fa-solid,.fa-regular,.fa-brands{font-style:normal;font-variant:normal;text-rendering:auto;line-height:1;display:inline-block;-webkit-font-smoothing:antialiased}
+.fa-arrow-right:before{content:"\f061"}
+.fa-phone:before{content:"\f095"}
+.fa-envelope:before{content:"\f0e0"}
+.fa-clock:before{content:"\f017"}
+.fa-location-dot:before{content:"\f3c5"}
+.fa-chevron-down:before{content:"\f078"}
+.fa-store:before{content:"\f54e"}
+.fa-facebook-f:before{content:"\f39e"}
+.fa-instagram:before{content:"\f16d"}
+.fa-whatsapp:before{content:"\f232"}

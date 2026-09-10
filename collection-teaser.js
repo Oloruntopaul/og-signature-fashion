@@ -24,7 +24,7 @@ function renderCollectionTeaser() {
         '<div class="relative overflow-hidden aspect-square">' + saleBadge(p) +
         '<img src="' +
         p.image +
-        '" alt="' +
+        '"' + productImageAttributes(p) + ' decoding="async" alt="' +
         p.name +
         '" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />' +
         heartButton +

@@ -33,3 +33,11 @@ A premium luxury bespoke tailoring website built with **HTML**, **Tailwind CSS**
 - **Theme System**: Seamless light and dark mode with saved user preference across the entire site.
 - **Mobile-First Luxury UI**: Fully responsive from 4-column desktop layouts to 2-column mobile grids, with horizontal swiping on the "Our Process" section.
 - **Effortless WhatsApp Checkout**: The cart automatically compiles every item and calculates the total to generate a pre-filled WhatsApp message for the customer.
+
+## Performance assets
+The live pages use compressed WebP images under assets/images, responsive product images, local fonts, and a precompiled Tailwind stylesheet. Original images remain in images for future editing.
+After changing Tailwind utility classes in HTML or JavaScript, rebuild and commit assets/tailwind.css:
+
+    npm exec --yes --package=tailwindcss@3.4.17 -- tailwindcss -c tailwind.config.cjs -i tailwind-input.css -o assets/tailwind.css --minify
+
+Fonts: Inter and Playfair Display (SIL Open Font License), supplied through Fontsource. Icons: Font Awesome Free 6.5.1 (icons CC BY 4.0, fonts SIL OFL 1.1, code MIT), subset to the icons used by this site.

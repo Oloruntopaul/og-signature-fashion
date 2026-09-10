@@ -23,45 +23,15 @@
           .setAttribute("content", "#111111");
       }
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            fontFamily: {
-              display: ['"Playfair Display"', "serif"],
-              body: ["Inter", "sans-serif"],
-            },
-            colors: {
-              ivory: "#FAF8F4",
-              cream: "#EFE7D8",
-              gold: "#C8A44D",
-              goldDeep: "#8B6512",
-              charcoal: "#111111",
-              night: "#1A1A1A",
-              ink: "#2C2C2C",
-              pearl: "#F5F5F5",
-            },
-            boxShadow: {
-              luxury: "0 28px 90px rgba(17, 17, 17, 0.16)",
-              gold: "0 18px 55px rgba(200, 164, 77, 0.20)",
-            },
-          },
-        },
-      };
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="./assets/tailwind.css" />
+
+
+    <link rel="stylesheet" href="./assets/fonts.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      href="./assets/icons.css"
     />
-    <link rel="icon" type="image/png" href="./images//logo2.jpeg" />
+    <link rel="icon" type="image/png" href="./assets/images/logo2.webp" />
     <style>
       :root {
         color-scheme: light;
@@ -226,13 +196,13 @@
           <span
             class="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border border-gold/25 bg-white shadow-sm dark:bg-night"
           >
-            <img
-              src="./images/logo.JPG"
+            <img decoding="async" width="107" height="160"
+              src="./assets/images/logo.webp"
               alt="OG Signature & Fashion World logo"
               class="aspect-square h-full w-full object-cover dark:hidden"
             />
-            <img
-              src="./images/logo2.jpeg"
+            <img decoding="async" width="107" height="160"
+              src="./assets/images/logo2.webp"
               alt="OG Signature & Fashion World logo"
               class="hidden aspect-square h-full w-full object-cover dark:block"
             />
@@ -380,8 +350,8 @@
         id="home"
         class="relative min-h-screen scroll-mt-20 lg:scroll-mt-24 overflow-hidden"
       >
-        <img
-          src="./images/background.png"
+        <img fetchpriority="high" decoding="async" width="1336" height="554"
+          src="./assets/images/background.webp"
           alt="OG Signature tailored look"
           class="absolute inset-0 h-full w-full object-cover object-[76%_20%] lg:object-center"
           loading="eager"
@@ -499,8 +469,8 @@
         <div class="grid items-center gap-12 lg:grid-cols-12">
           <div class="relative reveal hidden lg:block lg:col-span-5">
             <div class="overflow-hidden rounded-[2.5rem] shadow-luxury">
-              <img
-                src="./images//ceo.png"
+              <img decoding="async" width="600" height="800"
+                src="./assets/images/ceo.webp"
                 alt="Tailor working with premium fabric"
                 class="h-[520px] w-full object-cover transition duration-700 hover:scale-105"
                 loading="lazy"
@@ -608,8 +578,8 @@
               class="group relative flex flex-col overflow-hidden rounded-2xl hover-glow rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-night/60"
             >
               <div class="overflow-hidden aspect-square">
-                <img
-                  src="./images/ankara.JPG"
+                <img decoding="async" width="600" height="800"
+                  src="./assets/images/ankara.webp"
                   alt="Native wear tailoring"
                   class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   loading="lazy"
@@ -638,8 +608,8 @@
               class="group relative flex flex-col overflow-hidden rounded-2xl hover-glow rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-night/60"
             >
               <div class="overflow-hidden aspect-square">
-                <img
-                  src="./images/agbada2.jpeg"
+                <img decoding="async" width="600" height="800"
+                  src="./assets/images/agbada2.webp"
                   alt="Premium agbada"
                   class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   loading="lazy"
@@ -668,8 +638,8 @@
               class="group relative flex flex-col overflow-hidden rounded-2xl hover-glow rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-night/60"
             >
               <div class="overflow-hidden aspect-square">
-                <img
-                  src="./images/suit.jpeg"
+                <img decoding="async" width="600" height="800"
+                  src="./assets/images/suit.webp"
                   alt="Luxury suit"
                   class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   loading="lazy"
@@ -698,8 +668,8 @@
               class="group relative flex flex-col overflow-hidden rounded-2xl hover-glow rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-night/60"
             >
               <div class="overflow-hidden aspect-square">
-                <img
-                  src="./images//weddingattire.jpeg"
+                <img decoding="async" width="800" height="533"
+                  src="./assets/images/weddingattire.webp"
                   alt="Wedding attire"
                   class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   loading="lazy"
@@ -728,8 +698,8 @@
               class="group relative flex flex-col overflow-hidden rounded-2xl hover-glow rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-night/60"
             >
               <div class="overflow-hidden aspect-square">
-                <img
-                  src="./images/shirtss.jpeg"
+                <img decoding="async" width="800" height="600"
+                  src="./assets/images/shirtss.webp"
                   alt="Premium shirts"
                   class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   loading="lazy"
@@ -757,8 +727,8 @@
               class="group relative flex flex-col overflow-hidden rounded-2xl hover-glow rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-night/60"
             >
               <div class="overflow-hidden aspect-square">
-                <img
-                  src="./images/pant-trouser.png"
+                <img decoding="async" width="611" height="800"
+                  src="./assets/images/pant-trouser.webp"
                   alt="Structured trousers"
                   class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   loading="lazy"
@@ -786,8 +756,8 @@
               class="group relative flex flex-col overflow-hidden rounded-2xl hover-glow rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-night/60"
             >
               <div class="overflow-hidden aspect-square">
-                <img
-                  src="./images/readymade.jpeg"
+                <img decoding="async" width="600" height="800"
+                  src="./assets/images/readymade.webp"
                   alt="Ready to wear"
                   class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   loading="lazy"
@@ -815,8 +785,8 @@
               class="group relative flex flex-col overflow-hidden rounded-2xl hover-glow rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-night/60"
             >
               <div class="overflow-hidden aspect-square">
-                <img
-                  src="./images/filas.png"
+                <img decoding="async" width="800" height="800"
+                  src="./assets/images/filas.webp"
                   alt="Accessories details"
                   class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   loading="lazy"
@@ -1239,8 +1209,8 @@
 
       <!-- CTA SECTION -->
       <section class="section-space relative overflow-hidden">
-        <img
-          src="./images//booknow.png"
+        <img decoding="async" width="1600" height="697"
+          src="./assets/images/booknow.webp"
           alt="Book your fitting"
           class="absolute inset-0 h-full w-full object-cover"
           loading="lazy"
@@ -1446,13 +1416,13 @@
           <div
             class="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border border-gold/25 bg-white dark:bg-night"
           >
-            <img
-              src="./images/logo.JPG"
+            <img decoding="async" width="107" height="160"
+              src="./assets/images/logo.webp"
               alt="OG Signature & Fashion World logo"
               class="aspect-square h-full w-full object-cover dark:hidden"
             />
-            <img
-              src="./images/logo2.jpeg"
+            <img decoding="async" width="107" height="160"
+              src="./assets/images/logo2.webp"
               alt="OG Signature & Fashion World logo"
               class="hidden aspect-square h-full w-full object-cover dark:block"
             />

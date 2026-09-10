@@ -96,7 +96,7 @@ function renderProductCard(p) {
     '<div class="relative overflow-hidden aspect-square">' + saleBadge(p) + renderHeartButton(p, getCart().some(function(item) { return item.id === p.id; })) +
     '<img src="' +
     p.image +
-    '" alt="' +
+    '"' + productImageAttributes(p) + ' decoding="async" alt="' +
     p.name +
     '" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />' +
     "</div>" +
