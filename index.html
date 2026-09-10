@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -205,6 +205,8 @@
         }
       }
     </style>
+  <link rel="stylesheet" href="./sale.css" />
+<link rel="stylesheet" href="./refinements.css" />
   </head>
   <body
     class="font-body text-ink antialiased transition-colors duration-500 dark:text-pearl"
@@ -373,7 +375,7 @@
     </header>
 
     <!-- HERO SECTION (Home) -->
-    <main id="home">
+    <main>
       <section
         id="home"
         class="relative min-h-screen scroll-mt-20 lg:scroll-mt-24 overflow-hidden"
@@ -1520,73 +1522,12 @@
       onclick="closeCart()"
       class="fixed inset-0 z-[60] hidden bg-charcoal/50"
     ></div>
-    <aside
-      id="cartPanel"
-      class="fixed inset-y-0 right-0 z-[70] flex w-full max-w-sm translate-x-full flex-col bg-ivory transition-transform duration-300 dark:bg-night"
-    >
-      <div
-        class="flex items-center justify-between border-b border-gold/15 px-6 py-5"
-      >
-        <div class="flex items-center gap-3">
-          <h2
-            class="font-display text-xl font-bold text-charcoal dark:text-pearl"
-          >
-            Your Cart
-          </h2>
-        </div>
-        <button
-          onclick="closeCart()"
-          class="focus-ring h-9 w-9 rounded-full text-ink/60 hover:bg-gold/10 dark:text-pearl/60"
-          aria-label="Close cart"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="h-5 w-5"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-      </div>
-      <div class="flex-1 overflow-y-auto px-6">
-        <p
-          id="cartEmpty"
-          class="py-10 text-center text-sm text-ink/50 dark:text-pearl/50"
-        >
-          Your cart is empty.
-        </p>
-        <div id="cartItems"></div>
-      </div>
-      <button
-        onclick="clearCart()"
-        class="focus-ring text-[11px] font-bold uppercase tracking-wide text-charcoal hover:text-ink/60 dark:text-pearl/70"
-      >
-        Clear all
-      </button>
-      <div class="border-t border-gold/15 px-6 py-5">
-        <div
-          class="flex items-center justify-between text-sm font-semibold text-charcoal dark:text-pearl"
-        >
-          <span>Total</span>
-          <span id="cartTotal">₦0</span>
-        </div>
-        <a
-          id="cartWhatsappLink"
-          href="#"
-          target="_blank"
-          rel="noopener"
-          class="gold-button focus-ring mt-4 flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-gold"
-          >Order via WhatsApp</a
-        >
-      </div>
-    </aside>
+    <aside id="cartPanel" class="cart-drawer translate-x-full" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true" inert>
+  <header class="cart-heading"><div><p class="cart-eyebrow">YOUR SELECTION</p><h2 id="cartTitle">Shopping bag <span id="cartItemCount">0 items</span></h2></div><button type="button" class="cart-icon-button" onclick="closeCart()" aria-label="Close cart">✕</button></header>
+  <div class="cart-scroll"><div id="cartEmpty" class="cart-empty"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg><h3>A little room for something you love.</h3><p>Your bag is empty. Explore the collection and find your next favourite.</p><a href="./shop.html" class="cart-browse">Explore the collection</a></div><div id="cartItems"></div></div>
+  <footer class="cart-summary"><div class="cart-summary-row"><span>Subtotal</span><strong id="cartTotal">₦0</strong></div><div id="cartSavingsRow" class="cart-summary-row cart-savings" hidden><span>You save</span><strong id="cartSavings">₦0</strong></div><p class="cart-delivery">Delivery and availability confirmed on WhatsApp.</p><a id="cartWhatsappLink" class="cart-checkout" aria-disabled="true" tabindex="-1" target="_blank" rel="noopener">Order via WhatsApp <span aria-hidden="true">↗</span></a><div class="cart-footer-actions"><button type="button" onclick="closeCart()">Continue shopping</button><button id="clearCartButton" type="button" onclick="clearCart()" disabled>Clear bag</button></div></footer>
+  <span id="cartAnnouncement" class="sr-only" role="status" aria-live="polite"></span>
+</aside>
 
     <script src="./products.js"></script>
     <script src="./cart.js"></script>

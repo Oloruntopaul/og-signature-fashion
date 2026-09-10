@@ -4,7 +4,7 @@ function renderCollectionTeaser() {
   if (!grid) return;
 
   const cart = getCart();
-  const teaserItems = PRODUCTS.slice(0, 4);
+  const teaserItems = ["v1", "p1", "v4", "p2"].map(findProduct);
 
   grid.innerHTML = teaserItems
     .map(function (p) {
@@ -13,27 +13,15 @@ function renderCollectionTeaser() {
         return item.id === p.id;
       });
 
-      const priceOrBadge = p.available
-        ? '<p class="mt-1 font-display text-sm font-bold text-gold sm:text-base">' +
-          formatNaira(p.price) +
-          "</p>"
-        : '<p class="mt-1 text-xs font-bold uppercase tracking-wide text-ink/40 dark:text-pearl/40">Coming Soon</p>';
+      const priceOrBadge = p.available ? salePrice(p) : '<p>Coming Soon</p>';
 
-      const heartColor = isInCart ? "text-red-500" : "text-white";
-
-      const heartButton = p.available
-        ? "<button onclick=\"event.stopPropagation(); toggleWishlistHeart('" +
-          p.id +
-          '\')" class="focus-ring absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-black/30 backdrop-blur-sm transition hover:bg-black/50"><i class="fa-solid fa-heart text-base ' +
-          heartColor +
-          '"></i></button>'
-        : "";
+      const heartButton = p.available ? renderHeartButton(p, isInCart) : "";
 
       return (
-        '<article class="group relative cursor-pointer overflow-hidden hover-glow  overflow-hidden rounded-2xl hover-glowrounded-2xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-night/60" onclick="window.location.href=\'' +
+        '<article class="group relative cursor-pointer overflow-hidden hover-glow rounded-2xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-night/60" onclick="window.location.href=\'' +
         shopLink +
         "'\">" +
-        '<div class="relative overflow-hidden  aspect-square">' +
+        '<div class="relative overflow-hidden aspect-square">' + saleBadge(p) +
         '<img src="' +
         p.image +
         '" alt="' +
@@ -57,21 +45,6 @@ function renderCollectionTeaser() {
       );
     })
     .join("");
-}
-
-function toggleWishlistHeart(productId) {
-  const cart = getCart();
-  const alreadyIn = cart.some(function (item) {
-    return item.id === productId;
-  });
-
-  if (alreadyIn) {
-    removeFromCart(productId);
-  } else {
-    addToCart(productId);
-  }
-
-  renderCollectionTeaser();
 }
 
 document.addEventListener("DOMContentLoaded", renderCollectionTeaser);

@@ -93,7 +93,7 @@ function renderShopGrid() {
 function renderProductCard(p) {
   return (
     '<article class="group overflow-hidden overflow-hidden rounded-2xl hover-glow rounded-2xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-night/60">' +
-    '<div class="overflow-hidden aspect-square">' +
+    '<div class="relative overflow-hidden aspect-square">' + saleBadge(p) + renderHeartButton(p, getCart().some(function(item) { return item.id === p.id; })) +
     '<img src="' +
     p.image +
     '" alt="' +
@@ -107,9 +107,7 @@ function renderProductCard(p) {
     '<h3 class="mt-1 font-serif text-sm font-bold text-charcoal dark:text-pearl sm:text-base">' +
     p.name +
     "</h3>" +
-    '<p class="mt-1 font-display text-sm font-bold text-gold">' +
-    formatNaira(p.price) +
-    "</p>" +
+    salePrice(p) +
     "<button onclick=\"addToCart('" +
     p.id +
     '\')" class="focus-ring mt-3 w-full rounded-full border border-gold/40 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-goldDeep transition hover:bg-gold hover:text-white dark:text-white sm:text-xs">Add to Cart</button>' +
@@ -137,7 +135,7 @@ function initShopPage() {
   // Check the URL for a category (?cat=Agbada) — set by links from the homepage.
   // If none given, or it doesn't match a real category, default to the first one (Shirts).
   const params = new URLSearchParams(window.location.search);
-  const requestedCategory = params.get("cat");
+  const requestedCategory = params.get("cat") === "Shirts" ? "Vintage" : params.get("cat");
   const categories = getCategories();
 
   activeCategory =

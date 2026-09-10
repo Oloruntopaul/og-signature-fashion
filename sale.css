@@ -1,0 +1,5 @@
+
+.sale-badge{position:absolute;left:10px;top:10px;z-index:1;background:#782d26;color:#fff;padding:7px 10px;border-radius:5px;font:700 10px/1.2 Inter,sans-serif;letter-spacing:.05em;box-shadow:0 2px 8px #0002}
+.sale-price{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;margin-top:8px}.sale-price strong{color:#8b6512;font-size:18px}.sale-price del{font-size:12px;color:#737373}.sale-saving{font-size:11px;color:#782d26;margin-top:3px}.dark .sale-price strong{color:#e4c976}.dark .sale-price del{color:#aaa}.dark .sale-saving{color:#efb9aa}
+.sale-banner{margin-top:24px;padding:20px 24px;background:#efe7d8;border-left:3px solid #8b6512;border-radius:0 12px 12px 0;color:#29251d}.sale-banner strong{display:block;font-family:Georgia,serif;font-size:23px;margin-bottom:5px}.sale-banner p{font-size:13px;line-height:1.7}.dark .sale-banner{background:#29251d;color:#f5f5f5}
+@media(max-width:420px){.sale-badge{left:6px;top:6px;font-size:8px;padding:6px}.sale-price strong{font-size:16px}}

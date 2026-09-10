@@ -3,59 +3,72 @@
 // Everything else shows "Coming Soon" automatically.
 
 const PRODUCTS = [
+{"id": "v1", "name": "Vintage Shirt — New Edition 01", "category": "Vintage", "price": 10000, "originalPrice": 12000, "image": "./images/new-vintage-1.png", "available": true, "isNew": true},
+{"id": "v2", "name": "Vintage Shirt — New Edition 02", "category": "Vintage", "price": 10000, "originalPrice": 12000, "image": "./images/new-vintage-2.png", "available": true, "isNew": true},
+{"id": "v3", "name": "Vintage Shirt — New Edition 03", "category": "Vintage", "price": 10000, "originalPrice": 12000, "image": "./images/new-vintage-3.png", "available": true, "isNew": true},
+{"id": "v4", "name": "Vintage Shirt — New Edition 04", "category": "Vintage", "price": 10000, "originalPrice": 12000, "image": "./images/new-vintage-4.png", "available": true, "isNew": true},
+{"id": "v5", "name": "Vintage Shirt — New Edition 05", "category": "Vintage", "price": 10000, "originalPrice": 12000, "image": "./images/new-vintage-5.png", "available": true, "isNew": true},
+{"id": "v6", "name": "Vintage Shirt — New Edition 06", "category": "Vintage", "price": 10000, "originalPrice": 12000, "image": "./images/new-vintage-6.png", "available": true, "isNew": true},
   {
     id: "p1",
-    name: "Vintage Shirt",
-    category: "Shirts",
-    price: 10000,
+    name: "Vintage Shirt — Classic 01",
+    category: "Vintage",
+    price: 8000,
+    originalPrice: 10000,
     image: "./images/shirt7.png",
     available: true,
   },
   {
     id: "p2",
-    name: "Vintage Shirt",
-    category: "Shirts",
-    price: 10000,
+    name: "Vintage Shirt — Classic 02",
+    category: "Vintage",
+    price: 8000,
+    originalPrice: 10000,
     image: "./images/shirt5.png",
     available: true,
   },
   {
     id: "p3",
-    name: "Vintage Shirt",
-    category: "Shirts",
-    price: 10000,
+    name: "Vintage Shirt — Classic 03",
+    category: "Vintage",
+    price: 8000,
+    originalPrice: 10000,
     image: "./images/shirt3.png",
     available: true,
   },
   {
     id: "p4",
-    name: "Vintage Shirt",
-    category: "Shirts",
-    price: 10000,
+    name: "Vintage Shirt — Classic 04",
+    category: "Vintage",
+    price: 8000,
+    originalPrice: 10000,
     image: "./images/shirt4.png",
     available: true,
   },
   {
     id: "p5",
-    name: "Vintage Shirt",
-    category: "Shirts",
-    price: 10000,
+    name: "Vintage Shirt — Classic 05",
+    category: "Vintage",
+    price: 8000,
+    originalPrice: 10000,
     image: "./images/shirt6.png",
     available: true,
   },
   {
     id: "p6",
-    name: "Vintage Shirt",
-    category: "Shirts",
-    price: 10000,
+    name: "Vintage Shirt — Classic 06",
+    category: "Vintage",
+    price: 8000,
+    originalPrice: 10000,
     image: "./images/shirt2.png",
     available: true,
   },
   {
     id: "p7",
-    name: "Vintage Shirt",
-    category: "Shirts",
-    price: 10000,
+    name: "Vintage Shirt — Classic 07",
+    category: "Vintage",
+    price: 8000,
+    originalPrice: 10000,
     image: "./images/shirt.JPG",
     available: false,
   },
@@ -122,4 +135,16 @@ function findProduct(id) {
   return PRODUCTS.find(function (p) {
     return p.id === id;
   });
+}
+
+// Shared sale display keeps homepage and shop prices consistent.
+function saleBadge(p) {
+  if (!p.originalPrice || p.originalPrice <= p.price) return '';
+  const percent = Math.round((1 - p.price / p.originalPrice) * 1000) / 10;
+  return '<span class="sale-badge">SALE · ' + percent + '% OFF</span>';
+}
+function salePrice(p) {
+  return '<div class="sale-price"><strong>' + formatNaira(p.price) + '</strong>' +
+    (p.originalPrice > p.price ? '<del aria-label="Original price">' + formatNaira(p.originalPrice) + '</del>' : '') + '</div>' +
+    (p.originalPrice > p.price ? '<p class="sale-saving">Save ' + formatNaira(p.originalPrice - p.price) + '</p>' : '');
 }
