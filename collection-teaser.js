@@ -4,11 +4,11 @@ function renderCollectionTeaser() {
   if (!grid) return;
 
   const cart = getCart();
-  const teaserItems = ["v1", "p1", "v4", "p2"].map(findProduct);
+  const teaserItems = ["classic-2026-09-01", "classic-2026-09-02", "v1", "v4"].map(findProduct);
 
   grid.innerHTML = teaserItems
     .map(function (p) {
-      const shopLink = "./shop.html?cat=" + encodeURIComponent(p.category);
+      const shopLink = "./shop.html?cat=" + encodeURIComponent(p.category) + (p.edition ? "&edition=" + p.edition : "");
       const isInCart = cart.some(function (item) {
         return item.id === p.id;
       });
@@ -31,7 +31,7 @@ function renderCollectionTeaser() {
         "</div>" +
         '<div class="p-4 sm:p-5">' +
         '<span class="text-[10px] font-bold uppercase tracking-[0.2em] text-gold">' +
-        p.category +
+        shirtEditionLabel(p) +
         "</span>" +
         '<h3 class="mt-1 font-serif text-sm font-bold text-charcoal dark:text-pearl sm:text-base">' +
         p.name +

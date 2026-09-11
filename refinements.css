@@ -43,3 +43,10 @@ img,svg,iframe{max-width:100%} .grid>*{min-width:0} input,select,textarea{max-wi
 .heart-btn::before{content:'';position:absolute;inset:6px;border-radius:50%;background:rgba(255,255,255,.94);box-shadow:0 1px 5px #0001;z-index:-1}
 .heart-btn svg{width:16px;height:16px}.heart-btn.is-active{background:transparent}.heart-btn.is-active::before{background:#fff1f2}.heart-btn:hover{transform:none}
 @media(prefers-reduced-motion:reduce){.cart-checkout:hover{transform:none}}
+/* Shirt editions share one category and remain easy to switch on small screens. */
+.edition-filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.edition-filters[hidden]{display:none}
+.edition-filters button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:10px 16px;border:1px solid #d8c99f;border-radius:999px;background:transparent;color:#765515;font-size:12px;font-weight:600;cursor:pointer}
+.edition-filters button span{font-size:10px;opacity:.8}.edition-filters button[aria-pressed="true"]{background:#c8a44d;border-color:#c8a44d;color:#111}.edition-filters button:hover{border-color:#8b6512}
+.dark .edition-filters button{color:#e4c976;border-color:#6b5830}.dark .edition-filters button[aria-pressed="true"]{color:#111;border-color:#c8a44d}
+.edition-heading{grid-column:1/-1;display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-bottom:12px;border-bottom:1px solid #c8a44d40}.edition-heading:not(:first-child){margin-top:24px}#shopGrid .edition-heading h3{font:600 22px/1.4 'Playfair Display',Georgia,serif}.edition-heading p{font-size:12px;color:#777}.dark .edition-heading p{color:#aaa}
+@media(max-width:639px){.edition-filters{gap:6px}.edition-filters button{padding:10px 12px;font-size:11px}#shopGrid .edition-heading h3{font-size:20px}}

@@ -1,6 +1,7 @@
 // SHOP PAGE — sidebar category filter
 
 let activeCategory = null;
+let activeEdition = "all";
 
 function getCategories() {
   const categories = [];
@@ -62,32 +63,59 @@ function renderSidebar() {
   }
 }
 
+function updateShopUrl() {
+  const params = new URLSearchParams(window.location.search);
+  params.set("cat", activeCategory);
+  if (activeCategory === "Shirts" && activeEdition !== "all") params.set("edition", activeEdition);
+  else params.delete("edition");
+  history.replaceState(null, "", "?" + params.toString());
+}
+
 function selectCategory(category) {
-  activeCategory = category;
+  activeCategory = getCategories().includes(category) ? category : getCategories()[0];
+  activeEdition = "all";
   renderSidebar();
   renderShopGrid();
-  // update the URL so the link is shareable/bookmarkable without reloading the page
-  history.replaceState(null, "", "?cat=" + encodeURIComponent(category));
+  updateShopUrl();
+}
+
+function selectEdition(edition) {
+  const restoreFocus = Boolean(document.activeElement?.dataset.edition);
+  activeEdition = ["all", "classic", "new"].includes(edition) ? edition : "all";
+  renderShopGrid();
+  updateShopUrl();
+  if (restoreFocus) document.querySelector('#shirtEditionFilters [data-edition="' + activeEdition + '"]')?.focus();
+}
+
+function renderEditionFilters() {
+  const nav = document.getElementById("shirtEditionFilters");
+  if (!nav) return;
+  nav.hidden = activeCategory !== "Shirts";
+  if (nav.hidden) { nav.innerHTML = ""; return; }
+  const labels = { all: "All Shirts", classic: "Classic Edition", new: "New Edition" };
+  nav.innerHTML = Object.keys(labels).map(function (edition) {
+    const count = PRODUCTS.filter(p => p.available && p.category === "Shirts" && (edition === "all" || p.edition === edition)).length;
+    return '<button type="button" data-edition="' + edition + '" aria-pressed="' + (edition === activeEdition) + '" onclick="selectEdition(\'' + edition + '\')">' + labels[edition] + '<span>' + count + '</span></button>';
+  }).join("");
 }
 
 function renderShopGrid() {
   const grid = document.getElementById("shopGrid");
   const heading = document.getElementById("shopCategoryHeading");
   if (!grid) return;
-
-  const items = PRODUCTS.filter(function (p) {
-    return p.category === activeCategory;
-  });
-  const availableItems = items.filter(function (p) {
-    return p.available;
-  });
-
+  renderEditionFilters();
+  const items = PRODUCTS.filter(p => p.category === activeCategory && p.available);
   if (heading) heading.textContent = activeCategory;
-
-  grid.innerHTML =
-    availableItems.length > 0
-      ? availableItems.map(renderProductCard).join("")
-      : renderComingSoonCard(activeCategory);
+  if (activeCategory === "Shirts") {
+    const editions = activeEdition === "all" ? ["classic", "new"] : [activeEdition];
+    grid.innerHTML = editions.map(function (edition) {
+      const group = items.filter(p => p.edition === edition);
+      const label = edition === "classic" ? "Classic Edition" : "New Edition";
+      return '<div class="edition-heading"><h3>' + label + '</h3><p>' + group.length + ' shirts</p></div>' + group.map(renderProductCard).join("");
+    }).join("");
+  } else {
+    grid.innerHTML = items.length ? items.map(renderProductCard).join("") : renderComingSoonCard(activeCategory);
+  }
 }
 
 function renderProductCard(p) {
@@ -102,7 +130,7 @@ function renderProductCard(p) {
     "</div>" +
     '<div class="p-4 sm:p-5">' +
     '<span class="text-[10px] font-bold uppercase tracking-[0.2em] text-gold">' +
-    p.category +
+    shirtEditionLabel(p) +
     "</span>" +
     '<h3 class="mt-1 font-serif text-sm font-bold text-charcoal dark:text-pearl sm:text-base">' +
     p.name +
@@ -135,7 +163,7 @@ function initShopPage() {
   // Check the URL for a category (?cat=Agbada) — set by links from the homepage.
   // If none given, or it doesn't match a real category, default to the first one (Shirts).
   const params = new URLSearchParams(window.location.search);
-  const requestedCategory = params.get("cat") === "Shirts" ? "Vintage" : params.get("cat");
+  const requestedCategory = params.get("cat") === "Vintage" ? "Shirts" : params.get("cat");
   const categories = getCategories();
 
   activeCategory =
@@ -143,6 +171,7 @@ function initShopPage() {
       ? requestedCategory
       : categories[0];
 
+  activeEdition = activeCategory === "Shirts" && ["classic", "new"].includes(params.get("edition")) ? params.get("edition") : "all";
   renderSidebar();
   renderShopGrid();
 }
