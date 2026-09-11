@@ -4,7 +4,7 @@ function renderCollectionTeaser() {
   if (!grid) return;
 
   const cart = getCart();
-  const teaserItems = ["classic-2026-09-01", "classic-2026-09-02", "v1", "v4"].map(findProduct);
+  const teaserItems = ["v1", "v4", "classic-2026-09-01", "classic-2026-09-02"].map(findProduct);
 
   grid.innerHTML = teaserItems
     .map(function (p) {

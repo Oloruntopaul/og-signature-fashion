@@ -92,7 +92,7 @@ function renderEditionFilters() {
   if (!nav) return;
   nav.hidden = activeCategory !== "Shirts";
   if (nav.hidden) { nav.innerHTML = ""; return; }
-  const labels = { all: "All Shirts", classic: "Classic Edition", new: "New Edition" };
+  const labels = { all: "All Shirts", new: "New Edition", classic: "Classic Edition" };
   nav.innerHTML = Object.keys(labels).map(function (edition) {
     const count = PRODUCTS.filter(p => p.available && p.category === "Shirts" && (edition === "all" || p.edition === edition)).length;
     return '<button type="button" data-edition="' + edition + '" aria-pressed="' + (edition === activeEdition) + '" onclick="selectEdition(\'' + edition + '\')">' + labels[edition] + '<span>' + count + '</span></button>';
@@ -107,7 +107,7 @@ function renderShopGrid() {
   const items = PRODUCTS.filter(p => p.category === activeCategory && p.available);
   if (heading) heading.textContent = activeCategory;
   if (activeCategory === "Shirts") {
-    const editions = activeEdition === "all" ? ["classic", "new"] : [activeEdition];
+    const editions = activeEdition === "all" ? ["new", "classic"] : [activeEdition];
     grid.innerHTML = editions.map(function (edition) {
       const group = items.filter(p => p.edition === edition);
       const label = edition === "classic" ? "Classic Edition" : "New Edition";
