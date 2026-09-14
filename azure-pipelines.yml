@@ -34,3 +34,11 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/website'
     ArtifactName: 'website'
   displayName: 'Publish website artifact'
+  
+- task: AzureStaticWebApp@0
+  inputs:
+    app_location: '/'
+    output_location: ''
+    skip_app_build: true
+    azure_static_web_apps_api_token: '$(SWA_DEPLOYMENT_TOKEN)'
+  displayName: 'Deploy website to Azure Static Web App'
